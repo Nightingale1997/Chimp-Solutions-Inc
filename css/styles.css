@@ -11,14 +11,27 @@ body {
 #gameTiles article {
     width: 100%;
     font-size: 0;
-        margin-bottom: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+#playButton{
+    background:cyan;
+    width:10%;
+}
+
+.#playButton:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
 }
 
 .tile {
     width: 10%;
     margin-right: 2.5%;
     display: inline-block;
-    background: white;
+    background: red;
+    color: white;
+    position: relative;
 }
 
 .tile:last-child {
@@ -39,4 +52,18 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
+    font-size: 5vw;
+    text-align: center;
+    padding-left: 8%;
+    padding-top: 8%;
+}
+
+
+.content::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+    /* Adjusts for spacing */
 }
