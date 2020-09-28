@@ -1,6 +1,7 @@
 body {
     background: black;
     margin: 0;
+    user-select: none;
 }
 
 #gameTiles {
@@ -14,9 +15,10 @@ body {
     margin-bottom: 2.5%;
 }
 
-#playButton{
-    background:cyan;
-    width:10%;
+#playButton {
+    background: cyan;
+    width: 10%;
+    cursor: pointer;
 }
 
 .#playButton:after {
@@ -29,7 +31,6 @@ body {
     width: 10%;
     margin-right: 2.5%;
     display: inline-block;
-    background: red;
     color: white;
     position: relative;
 }
@@ -38,9 +39,7 @@ body {
     margin-right: 0%;
 }
 
-.whiteTile {
-    background: white;
-}
+
 
 .tile:after {
     content: "";
@@ -56,6 +55,7 @@ body {
     text-align: center;
     padding-left: 8%;
     padding-top: 8%;
+    cursor: default;
 }
 
 
@@ -66,4 +66,9 @@ body {
     vertical-align: middle;
     margin-right: -0.25em;
     /* Adjusts for spacing */
+}
+
+.whiteTile {
+    background: white;
+    cursor: pointer;
 }
