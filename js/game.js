@@ -3,7 +3,6 @@
         $("#playButton").click(function () {
             if (currentNumber == 0) {
                 setNumbers();
-                GAME_STARTED_FLAG = true;
             }
 
         });
@@ -60,6 +59,7 @@
             resetGame();
         }
 
+        //Resets game by removing all white tiles and emptying contents of every tile
         function resetGame() {
             $(".content").removeClass("whiteTile").html("");
             currentNumber = 0;
