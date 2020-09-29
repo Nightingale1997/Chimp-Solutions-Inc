@@ -2,7 +2,9 @@
         var level = 1;
 
         $("#playButton").on('click tap', function () {
+            $("#overlay").css("z-index:0;");
             $("#overlay").fadeOut();
+            
             if (currentNumber == 0) {
                 setNumbers();
             }
@@ -59,7 +61,6 @@
         function loss() {
             var audio = new Audio('audio/loss.mp3');
             audio.play();
-            alert("Fail!");
             $("#overlayTitle").text("Failed at round " + level);
             $("#playButton").text("Play again");
             resetGame();
@@ -69,7 +70,6 @@
         function victory() {
             var audio = new Audio('audio/victory.mp3');
             audio.play();
-            alert("Win!");
             $("#overlayTitle").text("Passed round " + level);
             $("#playButton").text("Continue");
             resetGame();
@@ -80,6 +80,7 @@
             $(".content").removeClass("whiteTile").html("");
             currentNumber = 0;
             $("#overlay").fadeIn();
+            $("#overlay").css("z-index:2;");
         }
 
         function setNumbers() {
