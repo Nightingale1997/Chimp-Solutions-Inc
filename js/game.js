@@ -1,13 +1,15 @@
         currentNumber = 0;
 
-        $("#playButton").click(function () {
+        $("#playButton").on('click tap', function() {
             if (currentNumber == 0) {
                 setNumbers();
             }
 
         });
 
-        $(".content").click(function (e) {
+
+
+        $(".content").on('click tap', function(e) {
             //Ignore click if game hasn't started
             if (currentNumber != 0) {
 
