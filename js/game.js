@@ -127,6 +127,6 @@
                         $(this).addClass("whiteTile");
                     }
                 });
-            }, 1000);
+            }, 200);
 
         }
