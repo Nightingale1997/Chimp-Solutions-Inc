@@ -19,6 +19,7 @@ body {
     background: cyan;
     width: 10%;
     cursor: pointer;
+    position: absolute;
 }
 
 .#playButton:after {

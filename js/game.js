@@ -1,15 +1,17 @@
-        currentNumber = 0;
+        var currentNumber = 0;
+        var level = 1;
 
-        $("#playButton").on('click tap', function() {
+        $("#playButton").on('click tap', function () {
             if (currentNumber == 0) {
                 setNumbers();
             }
+            $("#playButton").fadeOut();
 
         });
 
 
 
-        $(".content").on('click tap', function(e) {
+        $(".content").on('click tap', function (e) {
             //Ignore click if game hasn't started
             if (currentNumber != 0) {
 
@@ -26,9 +28,14 @@
                         $(pressedTile).html("").removeClass("whiteTile");
                         currentNumber++;
 
-                        if (currentNumber > 9) {
+                        console.log(currentNumber);
+                        console.log(level);
+                        console.log(currentNumber > level);
+                        if (currentNumber > level) {
                             victory();
+                            level++;
                         }
+                        /*
                         //Hide numbers after first is pressed
                         else if (currentNumber == 2) {
                             $(".content").each(function () {
@@ -37,6 +44,7 @@
                                 }
                             });
                         }
+                        */
                     } else {
                         loss();
                         resetGame();
@@ -52,6 +60,7 @@
             audio.play();
             alert("Fail!");
             resetGame();
+            level = 1;
         }
 
         function victory() {
@@ -65,11 +74,12 @@
         function resetGame() {
             $(".content").removeClass("whiteTile").html("");
             currentNumber = 0;
+            $("#playButton").fadeIn();
         }
 
         function setNumbers() {
             var i;
-            for (i = 0; i < 9; i++) {
+            for (i = 0; i < level; i++) {
                 //Randomize row and column
                 row = Math.floor(Math.random() * 5) + 1;
                 column = Math.floor(Math.random() * 8);
@@ -106,4 +116,17 @@
             }
             //Start
             currentNumber = 1;
+            hideNumbers();
+        }
+
+        function hideNumbers() {
+
+            setTimeout(function () {
+                $(".content").each(function () {
+                    if ($(this).text().length > 0) {
+                        $(this).addClass("whiteTile");
+                    }
+                });
+            }, 1000);
+
         }
