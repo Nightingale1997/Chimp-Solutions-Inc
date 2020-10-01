@@ -187,18 +187,18 @@ body {
 
 
 @keyframes moveTopRight {
-  0%   {top:0; right:0px;}
-  100% {top:-30%; right:-50%;}
+  0%   {margin-top:0; margin-right:0px;}
+  100% {margin-top:-30%; margin-right:-50%;}
 }
 @keyframes moveTopLeft {
-  0%   {top:0; left:0px;}
-  100% {top:-30%; left:-50%;}
+  0%   {margin-top:0; margin-left:0px;}
+  100% {margin-top:-30%; margin-left:-50%;}
 }
 @keyframes moveBottomRight {
-  0%   {bottom:0; right:0px;}
-  100% {bottom:-30%; right:-50%;}
+  0%   {margin-bottom:0; margin-right:0px;}
+  100% {margin-bottom:-30%; margin-right:-50%;}
 }
 @keyframes moveBottomLeft {
-  0%   {bottom:0; left:0px;}
-  100% {bottom:-30%; left:-50%;}
+  0%   {margin-bottom:0; margin-left:0px;}
+  100% {margin-bottom:-30%; margin-left:-50%;}
 }
