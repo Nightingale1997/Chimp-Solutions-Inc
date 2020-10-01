@@ -2,33 +2,72 @@ body {
     background: black;
     margin: 0;
     user-select: none;
-    background:#101f18;
+    background: #101f18;
     transition: ease-in-out 1s;
 }
 
-.gameBackground{
-    background:black;
+.gameBackground {
+    background: black;
 }
 
 
-#startTitle{
-    color:white;
-    width:10%;
-     margin-left:45%;
+#startTitle {
+    color: white;
+    width: 10%;
+    margin-left: 45%;
     text-align: center;
     position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#ayumu{
+        width: 50%;
+    position: absolute;
+    left: 12.5%;
         top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
-#chimpOverlay img{
+#chimpOverlay article img {
+    position: absolute;
+    height:30%;
+    width: 50%;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
+
+#jungleTopLeft {
+    top: 0;
+    left: 0;
+    transform: scaleX(-1);
+
+}
+
+#jungleTopRight {
+    top: 0;
+    right: 0;
+}
+
+#jungleBottomLeft {
+    bottom: 0;
+    left: 0;
+    transform: scaleX(-1);
+}
+
+#jungleBottomRight {
+    bottom: 0;
+    right: 0;
+}
+
 
 #gameTiles {
     width: 80%;
     margin-left: 10%;
-    display:none;
+    display: none;
 }
 
 #gameTiles article {
@@ -37,15 +76,15 @@ body {
     margin-bottom: 2.5%;
 }
 
-#overlay{
+#overlay {
     position: absolute;
     width: 100%;
     text-align: center;
     z-index: 2;
-    display:none;
+    display: none;
 }
 
-#overlay{
+#overlay {
     position: absolute;
     width: 100%;
     text-align: center;
@@ -53,10 +92,10 @@ body {
 }
 
 
-#overlayTitle{
-    color:white;
-    width:10%;
-     margin-left:45%;
+#overlayTitle {
+    color: white;
+    width: 10%;
+    margin-left: 45%;
 }
 
 
@@ -64,7 +103,7 @@ body {
     background: cyan;
     width: 10%;
     cursor: pointer;
-    margin-left:45%;
+    margin-left: 45%;
 }
 
 .#playButton:after {
@@ -73,9 +112,9 @@ body {
     padding-bottom: 100%;
 }
 
-#countdown{
+#countdown {
     width: 20%;
-    margin-left:40%;
+    margin-left: 40%;
     display: none;
     color: white;
     font-size: 30vw;
@@ -127,4 +166,38 @@ body {
 .whiteTile {
     background: white;
     cursor: pointer;
+}
+
+
+/* Animations */
+
+.jungleTopRightAnimation{
+   animation-name: moveTopRight;
+}
+.jungleBottomRightAnimation{
+   animation-name: moveBottomRight;
+}
+.jungleTopLeftAnimation{
+   animation-name: moveTopLeft;
+}
+.jungleBottomLeftAnimation{
+   animation-name: moveBottomLeft;
+}
+
+
+@keyframes moveTopRight {
+  0%   {top:0; right:0px;}
+  100% {top:-30%; right:-50%;}
+}
+@keyframes moveTopLeft {
+  0%   {top:0; left:0px;}
+  100% {top:-30%; left:-50%;}
+}
+@keyframes moveBottomRight {
+  0%   {bottom:0; right:0px;}
+  100% {bottom:-30%; right:-50%;}
+}
+@keyframes moveBottomLeft {
+  0%   {bottom:0; left:0px;}
+  100% {bottom:-30%; left:-50%;}
 }

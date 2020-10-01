@@ -13,15 +13,16 @@ var idle = true;
                 $("body").addClass("gameBackground");
 
                 $("#gameTiles").fadeIn();
-                $("#chimpOverlay").fadeOut();
-
-                    countDown();
+              //  $("#chimpOverlay").fadeOut();
+                moveJungle();
             } else {
                 
             }
 
 
         });
+
+
 
 
         $("#playButton").on('click tap', function () {
@@ -82,6 +83,20 @@ var idle = true;
             }
 
         });
+
+function moveJungle(){
+    $("#jungleTopRight").addClass("jungleTopRightAnimation");
+    $("#jungleTopLeft").addClass("jungleTopLeftAnimation");
+    $("#jungleBottomRight").addClass("jungleBottomRightAnimation");
+    $("#jungleBottomLeft").addClass("jungleBottomLeftAnimation");
+    $("#ayumu").fadeOut();
+    $("#startTitle").fadeOut();
+                setTimeout(function () {
+    countDown();
+            }, 1000);
+    
+
+}
 
         function loss() {
             var audio = new Audio('audio/loss.mp3');
