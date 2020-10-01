@@ -3,6 +3,7 @@
 
         $("#playButton").on('click tap', function () {
             $("#overlay").css("z-index:0;");
+
             $("#overlay").fadeOut();
             
             if (currentNumber == 0) {
@@ -64,7 +65,7 @@
             $("#overlayTitle").text("Failed at round " + level);
             $("#playButton").text("Play again");
             resetGame();
-            level = 1;
+            
         }
 
         function victory() {
@@ -72,14 +73,35 @@
             audio.play();
             $("#overlayTitle").text("Passed round " + level);
             $("#playButton").text("Continue");
+            $("#countdown").text("3");
             resetGame();
+            
+
+            $("#countdown").fadeIn();
+                        $("#overlayTitle").hide();
+            $("#playButton").hide();
+            setTimeout(function () {
+                $("#countdown").text("2");
+                setTimeout(function () {
+                    $("#countdown").text("1");
+                setTimeout(function () {
+                    $("#countdown").hide();
+                    setNumbers();
+               
+            }, 1000);
+            }, 1000);
+            }, 1000);
+             
         }
 
         //Resets game by removing all white tiles and emptying contents of every tile
         function resetGame() {
             $(".content").removeClass("whiteTile").html("");
             currentNumber = 0;
+            level = 1;
             $("#overlay").fadeIn();
+                        $("#overlayTitle").fadeIn();
+            $("#playButton").fadeIn();
             $("#overlay").css("z-index:2;");
         }
 

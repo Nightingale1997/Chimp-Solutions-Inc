@@ -43,6 +43,15 @@ body {
     padding-bottom: 100%;
 }
 
+#countdown{
+    width: 20%;
+    margin-left:40%;
+    display: none;
+    color: white;
+    font-size: 30vw;
+    margin-top: 10%;
+}
+
 .tile {
     z-index: 1;
     width: 10%;
