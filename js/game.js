@@ -3,14 +3,13 @@
 
         $("#playButton").on('click tap', function () {
             $("#overlay").css("z-index:0;");
-
-            $("#overlay").fadeOut();
             $("body").addClass("gameBackground");
             
 
+
             if (currentNumber == 0) {
-                setNumbers();
-            }
+                countDown();
+            } 
 
 
         });
@@ -71,20 +70,11 @@
 
         }
 
-        function victory() {
-            
-            var audio = new Audio('audio/victory.mp3');
-            audio.play();
-            $("#overlayTitle").text("Passed round " + level);
-            $("#playButton").text("Continue");
-            $("#countdown").text("3");
-            resetGame();
-
-
-            $("#countdown").fadeIn();
+        function countDown() {
             $("#overlayTitle").hide();
             $("#playButton").hide();
-            
+            $("#countdown").text("3");
+            $("#countdown").fadeIn();
             //Count down from 3
             setTimeout(function () {
                 $("#countdown").text("2");
@@ -97,6 +87,19 @@
                     }, 1000);
                 }, 1000);
             }, 1000);
+        }
+
+        function victory() {
+
+            var audio = new Audio('audio/victory.mp3');
+            audio.play();
+            $("#overlayTitle").text("Passed round " + level);
+            $("#playButton").text("Continue");
+
+            resetGame();
+
+            countDown();
+
 
         }
 
