@@ -5,7 +5,9 @@
             $("#overlay").css("z-index:0;");
 
             $("#overlay").fadeOut();
+            $("body").addClass("gameBackground");
             
+
             if (currentNumber == 0) {
                 setNumbers();
             }
@@ -64,49 +66,54 @@
             audio.play();
             $("#overlayTitle").text("Failed at round " + level);
             $("#playButton").text("Play again");
+            level = 1;
             resetGame();
-            
+
         }
 
         function victory() {
+            
             var audio = new Audio('audio/victory.mp3');
             audio.play();
             $("#overlayTitle").text("Passed round " + level);
             $("#playButton").text("Continue");
             $("#countdown").text("3");
             resetGame();
-            
+
 
             $("#countdown").fadeIn();
-                        $("#overlayTitle").hide();
+            $("#overlayTitle").hide();
             $("#playButton").hide();
+            
+            //Count down from 3
             setTimeout(function () {
                 $("#countdown").text("2");
                 setTimeout(function () {
                     $("#countdown").text("1");
-                setTimeout(function () {
-                    $("#countdown").hide();
-                    setNumbers();
-               
+                    setTimeout(function () {
+                        $("#countdown").hide();
+                        setNumbers();
+
+                    }, 1000);
+                }, 1000);
             }, 1000);
-            }, 1000);
-            }, 1000);
-             
+
         }
 
         //Resets game by removing all white tiles and emptying contents of every tile
         function resetGame() {
             $(".content").removeClass("whiteTile").html("");
             currentNumber = 0;
-            level = 1;
+
             $("#overlay").fadeIn();
-                        $("#overlayTitle").fadeIn();
+            $("#overlayTitle").fadeIn();
             $("#playButton").fadeIn();
             $("#overlay").css("z-index:2;");
         }
 
         function setNumbers() {
             var i;
+            //Add amount of numbers equal to current level
             for (i = 0; i < level; i++) {
                 //Randomize row and column
                 row = Math.floor(Math.random() * 5) + 1;

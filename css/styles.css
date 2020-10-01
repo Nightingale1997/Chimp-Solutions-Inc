@@ -2,6 +2,12 @@ body {
     background: black;
     margin: 0;
     user-select: none;
+    background:#101f18;
+    transition: ease-in-out;
+}
+
+.gameBackground{
+    background:black;
 }
 
 
@@ -23,6 +29,14 @@ body {
     text-align: center;
     z-index: 2;
 }
+
+#overlay{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
 
 #overlayTitle{
     color:white;
