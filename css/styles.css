@@ -4,6 +4,7 @@ body {
     user-select: none;
     background: #101f18;
     transition: ease-in-out 1s;
+    overflow: hidden; /* Hide scrollbars */
 }
 
 .gameBackground {

@@ -1,6 +1,6 @@
         var currentNumber = 0;
         var level = 1;
-var idle = true;
+        var idle = true;
 
 
 
@@ -13,10 +13,10 @@ var idle = true;
                 $("body").addClass("gameBackground");
 
                 $("#gameTiles").fadeIn();
-              //  $("#chimpOverlay").fadeOut();
+                //  $("#chimpOverlay").fadeOut();
                 moveJungle();
             } else {
-                
+
             }
 
 
@@ -84,19 +84,20 @@ var idle = true;
 
         });
 
-function moveJungle(){
-    $("#jungleTopRight").addClass("jungleTopRightAnimation");
-    $("#jungleTopLeft").addClass("jungleTopLeftAnimation");
-    $("#jungleBottomRight").addClass("jungleBottomRightAnimation");
-    $("#jungleBottomLeft").addClass("jungleBottomLeftAnimation");
-    $("#ayumu").fadeOut();
-    $("#startTitle").fadeOut();
-                setTimeout(function () {
-    countDown();
+        function moveJungle() {
+            $("#jungleTopRight").addClass("jungleTopRightAnimation");
+            $("#jungleTopLeft").addClass("jungleTopLeftAnimation");
+            $("#jungleBottomRight").addClass("jungleBottomRightAnimation");
+            $("#jungleBottomLeft").addClass("jungleBottomLeftAnimation");
+            $("#ayumu").fadeOut();
+            $("#startTitle").fadeOut();
+            setTimeout(function () {
+                countDown();
+                $("#chimpOverlay").fadeOut();
             }, 1000);
-    
 
-}
+
+        }
 
         function loss() {
             var audio = new Audio('audio/loss.mp3');
