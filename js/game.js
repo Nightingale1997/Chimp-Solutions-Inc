@@ -1,15 +1,38 @@
         var currentNumber = 0;
         var level = 1;
+var idle = true;
+
+
+
+        $("body").on('click tap', function () {
+            if (idle == true) {
+                idle = false;
+
+
+                $("#overlay").css("z-index:0;");
+                $("body").addClass("gameBackground");
+
+                $("#gameTiles").fadeIn();
+                $("#chimpOverlay").fadeOut();
+
+                    countDown();
+            } else {
+                
+            }
+
+
+        });
+
 
         $("#playButton").on('click tap', function () {
             $("#overlay").css("z-index:0;");
             $("body").addClass("gameBackground");
-            
+
 
 
             if (currentNumber == 0) {
                 countDown();
-            } 
+            }
 
 
         });
@@ -71,6 +94,7 @@
         }
 
         function countDown() {
+            $("#overlay").fadeIn();
             $("#overlayTitle").hide();
             $("#playButton").hide();
             $("#countdown").text("3");
