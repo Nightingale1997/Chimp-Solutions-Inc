@@ -1,0 +1,242 @@
+body {
+    background-color: #C8E1A9;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.masthead {
+    height: 100%;
+    background-image: url(../img/rainforest.jpg);
+    /* opacity: 0.7; */
+    filter: blur(2px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+
+.project-section, .process-section, .team-section {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+.project-section {
+    padding-top: 10px;
+    /* background-color: rgba(61, 90, 67, 0.6); */
+}
+
+.process-section {
+    padding-top: 10px;
+    background-color: rgba(61, 90, 67, 0.4);
+}
+
+.team-section {
+    height: 700px;
+    /* background-color: rgba(61, 90, 67, 0.6); */
+    margin-top: 50px;
+}
+
+.wrapper-project {
+    display: grid;
+    /* background: rgba(61, 90, 67, 0.6); */
+    padding: 1em 5em 3em 5em;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 3em;
+}
+
+.wrapper-process {
+    display: grid;
+    /* background:  rgba(61, 90, 67, 0.6); */
+    padding: 1em 5em 3em 5em;
+    grid-template-columns: 45% 8% 45%;
+    grid-column-gap: 1em;
+    width: 100%;
+}
+
+.wrapper-footer {
+    display: grid;
+    /* background: rgba(61, 90, 67, 0.6); */
+    padding: 1em 5em 3em 5em;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+    grid-column-gap: 2em;
+    width: 100%;
+    height: 400px;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+#game-img {
+    width: 50%;
+    margin-top: 30px;
+}
+
+#game {
+    width: 100%;
+}
+
+.click-here {
+    width: 100%;
+    text-align: center;
+    color: rgba(61, 90, 67, 1);
+}
+
+.click-here:hover {
+    color: rgba(61, 90, 67, 0.6);
+}
+
+.v-space {
+    height: 100px;
+    width: 100%;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: rgba(61, 90, 67, 1);
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+a {
+    margin: 15px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;   
+    font-family: Arial, Helvetica, sans-serif 
+}
+
+a:hover {
+    color: #000;
+}
+
+p {
+    margin: -10px;
+    font-size: 12px;
+    color: #303E2B;
+    text-decoration: none; 
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 44px;
+    font-weight: normal;
+    text-align: center;
+    color: #303E2B;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    color: #303E2B;
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: left;
+    color: #303E2B;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: uppercase;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.circle {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    border-radius: 17px;
+    background: #303E2B;
+    z-index: 2;
+    margin-left: 16px;
+    /* margin-top: 30px; */
+}
+
+#circle-empathizing {
+    top: 170px;
+}
+
+#circle-defining {
+    top: 510px;
+}
+
+#circle-ideating {
+    top: 810px;
+}
+
+#circle-prototyping {
+    top: 1150px;
+}
+
+#circle-evaluating {
+    top: 1490px;
+}
+
+#circle-end {
+    top: 1990px;
+}
+
+
+.line {
+    position: absolute;
+    width: 8px;
+    height: 90%;
+    background: rgba(61, 90, 67, 0.6);
+    margin-top: 35px;
+    margin-left: 30px;
+    z-index: 1;
+}
+
+#ideating, #evaluating, #prototyping {
+    margin-top: 170px;
+}
+
+#defining {
+    margin-top: 360px;
+}
+
+#empathizing {
+    margin-top: 25px;
+    /* background-color: #eee; */
+    padding: 10px;
+}
+
+#defining, #ideating, #evaluating, #prototyping {
+    /* background-color: #eee; */
+    padding: 10px;
+}
