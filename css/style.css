@@ -41,9 +41,10 @@ body {
 }
 
 .team-section {
-    height: 700px;
+/*    height: 700px;*/
     /* background-color: rgba(61, 90, 67, 0.6); */
-    margin-top: 50px;
+/*    margin-top: 50px;*/
+    background-color: #C8E1A9;
 }
 
 .wrapper-project {
@@ -57,6 +58,7 @@ body {
 .wrapper-process {
     display: grid;
     /* background:  rgba(61, 90, 67, 0.6); */
+    background: #C8E1A9;
     padding: 1em 5em 3em 5em;
     grid-template-columns: 45% 8% 45%;
     grid-column-gap: 1em;
@@ -90,6 +92,7 @@ img {
 .click-here {
     width: 100%;
     text-align: center;
+    margin-top: 10px;
     color: rgba(61, 90, 67, 1);
 }
 
@@ -97,8 +100,17 @@ img {
     color: rgba(61, 90, 67, 0.6);
 }
 
+.linkedin {
+    min-width: 21px;
+    width: 15%;
+    margin-top: 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
 .v-space {
-    height: 100px;
+    height: 50px;
     width: 100%;
 }
 
@@ -119,7 +131,10 @@ img {
     display: flex;
     justify-content: center;
     list-style: none;
+    margin: 15px;
+    color: #fff;
 }
+
 
 a {
     margin: 15px;
@@ -149,6 +164,7 @@ h2 {
     font-weight: normal;
     text-align: center;
     color: #303E2B;
+    margin-top: 50px;
 }
 
 h3 {
@@ -174,53 +190,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.circle {
-    position: absolute;
-    width: 34px;
-    height: 34px;
-    -webkit-border-radius: 17px;
-    -moz-border-radius: 17px;
-    border-radius: 17px;
-    background: #303E2B;
-    z-index: 2;
-    margin-left: 16px;
-    /* margin-top: 30px; */
-}
-
-#circle-empathizing {
-    top: 170px;
-}
-
-#circle-defining {
-    top: 510px;
-}
-
-#circle-ideating {
-    top: 810px;
-}
-
-#circle-prototyping {
-    top: 1150px;
-}
-
-#circle-evaluating {
-    top: 1490px;
-}
-
-#circle-end {
-    top: 1990px;
-}
-
-
-.line {
-    position: absolute;
-    width: 8px;
-    height: 90%;
-    background: rgba(61, 90, 67, 0.6);
-    margin-top: 35px;
-    margin-left: 30px;
-    z-index: 1;
-}
 
 #ideating, #evaluating, #prototyping {
     margin-top: 170px;
@@ -239,4 +208,9 @@ html {
 #defining, #ideating, #evaluating, #prototyping {
     /* background-color: #eee; */
     padding: 10px;
+}
+
+
+#credit {
+    margin-bottom: 10px;
 }
