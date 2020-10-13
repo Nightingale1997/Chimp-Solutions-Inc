@@ -39,16 +39,16 @@
     }
     else
     {
-        echo "no data available";
+  //      echo "no data available";
         
     }
     $sql_highscore = "SELECT * FROM highscore ORDER BY score DESC, time";
         if ($result = mysqli_query($con, $sql_highscore)) {
-            echo " ^^ " ;
+            //echo " ^^ " ;
          } 
         else 
         {
-            echo "Error: " . $sql . "<br>" . mysqli_error($con);
+         //   echo "Error: " . $sql . "<br>" . mysqli_error($con);
         }
     
         /**
@@ -65,11 +65,11 @@
 
         $sql_levelscore = "SELECT score_id, score FROM highscore ORDER BY score DESC, time";
         if ($result2 = mysqli_query($con, $sql_levelscore)) {
-            echo " ^__^ " ;
+           // echo " ^__^ " ;
          } 
         else 
         {
-            echo "Error: " . $sql . "<br>" . mysqli_error($con);
+           // echo "Error: " . $sql . "<br>" . mysqli_error($con);
         }
 
         if (mysqli_num_rows($result2) > 0) {
@@ -96,64 +96,23 @@
 
 ?>
 
-
 <HTML>
-
 <HEAD>
 <link rel="stylesheet" href="css/styles.css?v=1.0">
 <TITLE>Your Title Here</TITLE>
 
 </HEAD>
 
-<BODY>
-
+<BODY id=resultsBody>
+<h1 id="resultsTitle">DINA RESULTAT:</h1>
+<div class="logs" id="log1"><div>
+<div class="logs" id="log2"><div>
+<div class="logs" id="log3"><div>
+<div class="logs" id="log4"><div>
+<div class="logs" id="log5"><div>
 <div id="view"> 
-        <div id="container">
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Level</th>
-                    <th>Time</th>
-                </tr>
-            <?php
-                if (mysqli_num_rows($result) > 0) {
-                    while($row = mysqli_fetch_assoc($result)) {
-            ?>
-                    <tr>
-                        <th><?php echo $row["name"]?></th>
-                        <th><?php echo $row["score"]?></th>
-                        <th><?php echo $row["time"]?></th>
-                    </tr>  
-
-                <?php } 
-             }
-             else {
-                 echo "no table";
-             } ?>
-            </table>
-            <br>
-            <br>
-            <table>
-                <tr>
-                    <th>Level</th>
-                    <th>Number of People</th>
-                </tr>
-            <?php
-                if ($levelList > 0) {
-                    $levNum = 1;
-                    foreach($levelList as $value) {
-                        
-            ?>
-                    <tr>
-                        <th><?php echo $levNum?></th>
-                        <th><?php echo $value?></th>
-                    </tr>  
-                <?php   
-                $levNum +=1; 
-                    }
-                }
-                ?>
-            </table>
+        <div>
+           
         </div>
  </div>    
 
@@ -161,34 +120,9 @@
 
 
 
-<HR>
-
-<a href="http://somegreatsite.com">Link Name</a>
-
-is a link to another nifty site
-
-    <H1>ChimpSolutions</H1>
-
-<H2>This is a Medium Header</H2>
-
-Send me mail at <a href="mailto:support@yourcompany.com">
-
-support@yourcompany.com</a>.
-
-<div id="chartContainer" style="height: 370px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
-<P> This is a new paragraph!
-
-<P> <B>This is a new paragraph!</B>
-
-<BR> <B><I>This is a new sentence without a paragraph break, in bold italics.</I></B>
-
-<HR>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/scripts.js">
  
-
 </BODY>
 
 </HTML>
