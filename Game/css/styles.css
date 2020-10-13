@@ -255,39 +255,34 @@ z-index: 15;
 
 .logs {
     position: absolute;
-    width: 180.69px;
+    width: 12.6%;
 }
 
 #log1 {
-    background:  url(../img/L1.png);
     height: 249.83px;
-    left: 124px;
-    top: 673px;
+    left: 8.6%;
+    top: 82%;
 }
 
 #log2 {
-    background:  url(../img/L2.png);
     height: 322.2px;
     left: 364.39px;
     top: 601.72px;
 }
 
 #log3 {
-    background:  url(../img/L3.png);
     height: 420.75px;
     left: 604.78px;
     top: 504.25px;
 }
 
 #log4 {
-    background:  url(../img/L4.png);
     height: 506.31px;
     left: 856.31px;
     top: 418.69px;
 }
 
 #log5 {
-    background:  url(../img/L5.png);
     height: 630.31px;
     left: 1112px;
     top: 293px;
