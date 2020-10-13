@@ -1,6 +1,7 @@
         var currentNumber = 0;
         var level = 1;
         var idle = true;
+        var sound = true;
 
 
 
@@ -12,7 +13,7 @@
                 $("#overlay").css("z-index:0;");
                 $("body").addClass("gameBackground");
 
-                $("#gameTiles").fadeIn();
+                
                 //  $("#chimpOverlay").fadeOut();
                 moveJungle();
             } else {
@@ -62,7 +63,7 @@
                         console.log(currentNumber > level);
                         if (currentNumber > level) {
                             victory();
-                            level++;
+                            level+=2;
                         }
                         /*
                         //Hide numbers after first is pressed
@@ -76,7 +77,6 @@
                         */
                     } else {
                         loss();
-                        resetGame();
                     }
                 }
 
@@ -85,6 +85,10 @@
         });
 
         function moveJungle() {
+            if(sound){
+               var audio = new Audio('audio/gamestart.mp3');
+            audio.play(); 
+            }
             $("#jungleTopRight").addClass("jungleTopRightAnimation");
             $("#jungleTopLeft").addClass("jungleTopLeftAnimation");
             $("#jungleBottomRight").addClass("jungleBottomRightAnimation");
@@ -100,8 +104,12 @@
         }
 
         function loss() {
-            var audio = new Audio('audio/loss.mp3');
-            audio.play();
+            
+            if(sound){
+               var audio = new Audio('audio/loss.mp3');
+            audio.play(); 
+            }
+            
             $("#overlayTitle").text("Failed at round " + level);
             $("#playButton").text("Play again");
             level = 1;
@@ -116,14 +124,32 @@
             $("#countdown").text("3");
             $("#countdown").fadeIn();
             //Count down from 3
+            if(sound){
+               var audio = new Audio('audio/countdown.mp3');
+            audio.play(); 
+            }
             setTimeout(function () {
+                $("#gameTiles").fadeIn(2000);
                 $("#countdown").text("2");
+                if(sound){
+               var audio = new Audio('audio/countdown.mp3');
+            audio.play(); 
+            }
                 setTimeout(function () {
+                    if(sound){
+               var audio = new Audio('audio/countdown.mp3');
+            audio.play(); 
+            }
                     $("#countdown").text("1");
                     setTimeout(function () {
+                        if(sound){
+               var audio = new Audio('audio/countdownend.mp3');
+            audio.play(); 
+            }
                         $("#countdown").hide();
                         setNumbers();
-
+                        $("#overlay").fadeOut();
+                        
                     }, 1000);
                 }, 1000);
             }, 1000);
@@ -131,8 +157,10 @@
 
         function victory() {
 
+            if(sound){
             var audio = new Audio('audio/victory.mp3');
             audio.play();
+            }
             $("#overlayTitle").text("Passed round " + level);
             $("#playButton").text("Continue");
 
