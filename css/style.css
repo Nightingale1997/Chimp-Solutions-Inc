@@ -1,5 +1,7 @@
 body {
     background-color: #C8E1A9;
+    background-color: rgba(61, 90, 67, 1);
+    background-image: url(../img/maze-black.png);
     height: 100%;
     width: 100%;
     padding: 0px;
@@ -33,25 +35,40 @@ body {
 .project-section {
     padding-top: 10px;
 /*    background-image: url("../img/TL1.png");*/
-     background-color: rgba(61, 90, 67, 1); 
+    background-color: rgba(61, 90, 67, 1);
+/*    background-image: url(../img/maze-black.png);*/
+    background-image: url(../img/top-left.png), url(../img/top-right.png), url(../img/maze-black.png);
+    background-position: left top, right top, left top;
+    background-repeat: no-repeat, no-repeat, repeat;
+
 }
 
 .game-section {
     padding-top: 10px;
-    /* background-color: rgba(61, 90, 67, 0.6); */
+    background-image: url(../img/side-left.png), url(../img/side-right.png);
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
 }
 
 .process-section {
     padding-top: 10px;
 /*    background-color: rgba(61, 90, 67, 0.4);*/
     background: rgba(61, 90, 67, 1);
+/*    background-image: url(../img/maze-black.png);*/
+    background-image: url(../img/side-left.png), url(../img/side-right.png), url(../img/maze-black.png);
+    background-position: left top, right top, left top;
+    background-repeat: no-repeat, no-repeat, repeat;
+
 }
 
 .team-section {
 /*    height: 700px;*/
     /* background-color: rgba(61, 90, 67, 0.6); */
 /*    margin-top: 50px;*/
-    background-color: #C8E1A9;
+/*    background-color: #C8E1A9;*/
+    background-image: url(../img/bottom-left.png), url(../img/bottom-right.png);
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat, no-repeat;
 }
 
 .wrapper-project {
@@ -67,7 +84,11 @@ body {
 .wrapper-game {
     display: grid;
     grid-template-columns: 100%;
-    width: 80%;  
+    width: 75%;  
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 1);
 }
 
 
@@ -82,7 +103,7 @@ body {
 }
 
 
-.wrapper-footer {
+.wrapper-team {
     display: grid;
     /* background: rgba(61, 90, 67, 0.6); */
     padding: 1em 5em 3em 5em;
@@ -90,6 +111,7 @@ body {
     grid-column-gap: 1%;
     width: 100%;
     height: 400px;
+/*    background: white;*/
 }
 
 
@@ -97,6 +119,7 @@ body {
     background: white;
     padding: 20px;
     border-radius: 4px;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 1);
 }
 
 img {
@@ -104,21 +127,14 @@ img {
 }
 
 #game-img {
-    width: 60%;
-    height: 400px;
+    width: 100%;
+    height: 550px;
     margin-top: 30px;
 }
 
-#game {
-    width: 100%;
-}
-
 .click-here {
-/*    width: 100%;*/
-/*    text-align: center;*/
     margin: 0px;
-/*    color: rgba(61, 90, 67, 0.6);*/
-    color: black;
+    color: rgba(61, 90, 67, 0.6);
 }
 
 .click-here:hover {
@@ -188,9 +204,8 @@ h2 {
     font-size: 60px;
     font-weight: normal;
     text-align: center;
-    color: #303E2B;
+    color: white;
     margin-top: 50px;
-    text-shadow: 2px 2px 10px rgba(61, 90, 67, 1);
 }
 
 h3 {
@@ -212,6 +227,37 @@ h4 {
 /*    text-transform: uppercase;*/
 }
 
+
+h5 {
+    font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    color: #303E2B;
+/*    background-color: white;*/
+    margin-bottom: 0px;
+    margin-top: 0px;
+/*    text-transform: uppercase;*/
+}
+
+.white-box {
+    background-color: white;
+    padding-top: 10px;
+    border-radius: 4px;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 1);
+}
+
+/*
+.white-box-large {
+    background-color: white;
+    width: 90%;
+    padding-top: 10px;
+    border-radius: 4px;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 1);
+}
+*/
+
+
 .description {
 /*    color: red;*/
     font-size: 16px;
@@ -219,17 +265,14 @@ h4 {
     line-height: normal;
 }
 
-.white-title {
-    color: white;
-    text-shadow: 2px 2px 10px black;
-}
 
 html {
     scroll-behavior: smooth;
 }
 
 .scrolling-active {
-    background-color: rgba(61, 90, 67, 1);;
+    background-color: rgba(61, 90, 67, 1);
+    background-image: url(../img/maze-black.png);
     box-shadow: 0 3px 1rem rgba(0, 0, 0, 1);
 }
 
