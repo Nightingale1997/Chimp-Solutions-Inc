@@ -204,6 +204,13 @@ width: 10.75%;
     margin-bottom:0;
 }
 
+#soundSwitch{
+z-index: 15;
+    position: absolute;
+    left: 2.5vw;
+    top: 2.5vw;
+}
+
 
 /* Animations */
 

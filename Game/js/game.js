@@ -4,8 +4,24 @@
         var sound = true;
 
 
+        $("#soundSwitch").on('click tap', function () {
+            if(sound){
+                sound = false;
+                 $("#soundSwitch").attr('src','img/soundoff.png');
+            }
+            else{
+                 sound = true;
+                 $("#soundSwitch").attr('src','img/soundon.png');
+            }
+            
 
-        $("body").on('click tap', function () {
+        });
+
+
+        $("body").on('click tap', function (evt) {
+            if(evt.target.id == "soundSwitch")
+          return;
+            
             if (idle == true) {
                 idle = false;
 
