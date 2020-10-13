@@ -16,6 +16,7 @@ body {
     font-family: DancingJungle;
 }
 
+
 .gameBackground {
     background: url(../img/darkbackground.jpg);
     background-size: auto 100%;
@@ -204,6 +205,13 @@ width: 10.75%;
     margin-bottom:0;
 }
 
+#soundSwitch{
+z-index: 15;
+    position: absolute;
+    left: 2.5vw;
+    top: 2.5vw;
+}
+
 
 /* Animations */
 
@@ -222,6 +230,69 @@ width: 10.75%;
 .jungleBottomLeftAnimation {
     animation-name: moveBottomLeft;
 }
+
+/*php css*/
+
+#resultsBackground{
+    background:  url(../img/regularbackground.jpg);
+    background-size: auto 100%;
+    background-attachment: fixed;
+    /* Hide scrollbars */
+}
+
+#resultsTitle {
+    position: absolute;
+    left: 9%;
+    top: 13%;
+    font-family: DancingJungle;
+    color: white;
+    text-align: center;
+    font-size: 5.5vw;
+    font-weight: lighter;
+    letter-spacing: 0.02em;
+    -webkit-text-stroke: 0.03em black; /* width and color */
+}
+
+.logs {
+    position: absolute;
+    width: 180.69px;
+}
+
+#log1 {
+    background:  url(../img/L1.png);
+    height: 249.83px;
+    left: 124px;
+    top: 673px;
+}
+
+#log2 {
+    background:  url(../img/L2.png);
+    height: 322.2px;
+    left: 364.39px;
+    top: 601.72px;
+}
+
+#log3 {
+    background:  url(../img/L3.png);
+    height: 420.75px;
+    left: 604.78px;
+    top: 504.25px;
+}
+
+#log4 {
+    background:  url(../img/L4.png);
+    height: 506.31px;
+    left: 856.31px;
+    top: 418.69px;
+}
+
+#log5 {
+    background:  url(../img/L5.png);
+    height: 630.31px;
+    left: 1112px;
+    top: 293px;
+}
+
 
 
 @keyframes moveTopRight {
