@@ -1,5 +1,16 @@
+:root {
+  --background-green: rgba(61, 90, 67, 1);
+    --dust-green: rgba(213, 227, 216, 0.8);
+}
+
+@font-face {
+  font-family: DancingJungle;
+  src: url(../fonts/DancingJungle.ttf);
+}
+
 body {
-    background-color: #C8E1A9;
+    background-color: var(--background-green);
+    background-image: url(../img/maze-black.png);
     height: 100%;
     width: 100%;
     padding: 0px;
@@ -9,15 +20,21 @@ body {
 
 .header {
     height: 100%;
-    background-image: url(../img/rainforest.jpg);
-    /* opacity: 0.7; */
-    filter: blur(2px);
+/*    background-image: url(../img/regularbackground.jpg);*/
+    background-color: var(--background-green);
+    background-image: url(../img/Leaves/top-left.png), url(../img/Leaves/top-right.png), url(../img/maze-black.png);
+    background-position: left top, right top, left top;
+    background-repeat: no-repeat, no-repeat, repeat;
+/*    filter: blur(2px);*/
+/*
     background-size: cover;
     background-position: center;
     background-repeat: repeat-x;
+*/
     padding: 0px;
     margin: 0px;
     position: relative;
+    height: 550px;
 }
 
 .project-section, .game-section, .process-section, .team-section {
@@ -32,49 +49,66 @@ body {
 
 .project-section {
     padding-top: 10px;
-/*    background-image: url("../img/TL1.png");*/
-     background-color: rgba(61, 90, 67, 1); 
+    background-color: rgba(61, 90, 67, 1);    
+    background-image: url(../img/maze-black.png);
+    width: 100%;
+    background-image: url(../img/Leaves/side-left2.png), url(../img/Leaves/side-right2.png), url(../img/maze-black.png);
+    background-position: left top, right bottom, left top;
+    background-repeat: no-repeat, no-repeat, repeat;
 }
 
 .game-section {
     padding-top: 10px;
-    /* background-color: rgba(61, 90, 67, 0.6); */
+    background-image: url(../img/Leaves/side-left.png), url(../img/Leaves/side-right.png);
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat, no-repeat;
 }
 
 .process-section {
     padding-top: 10px;
-/*    background-color: rgba(61, 90, 67, 0.4);*/
-    background: rgba(61, 90, 67, 1);
+        background-color: var(--background-green);
+    background-image: url(../img/Leaves/leaves-left.png), url(../img/Leaves/leaves-right.png), url(../img/maze-black.png);
+    background-position: left top, right top, left top;
+    background-repeat: no-repeat, no-repeat, repeat;
+
 }
 
 .team-section {
-/*    height: 700px;*/
-    /* background-color: rgba(61, 90, 67, 0.6); */
-/*    margin-top: 50px;*/
-    background-color: #C8E1A9;
+    background-image: url(../img/Leaves/bottom-left.png), url(../img/Leaves/bottom-right.png);
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat, no-repeat;
+}
+
+
+.wrapper-header {
+/*    background-color: var(--dust-green);*/
+    padding-top: 200px;
+/*    border-radius: 4px;*/
+/*    box-shadow: 0 3px 1rem rgba(0, 0, 0, 1);*/
 }
 
 .wrapper-project {
     display: grid;
-    /* background: rgba(61, 90, 67, 0.6); */
     padding: 1em 5em 3em 5em;
     grid-template-columns: 47% 47%;
     grid-column-gap: 4%;
     grid-row-gap: 10%;
-    width: 1050px;   
+    width: 80%;   
 }
 
 .wrapper-game {
     display: grid;
     grid-template-columns: 100%;
-    width: 80%;  
+    width: 75%;  
+    background-color: var(--dust-green);
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 1);
 }
 
 
 .wrapper-process {
     display: grid;
-    /* background:  rgba(61, 90, 67, 0.6); */
-    background: #C8E1A9;
     padding: 1em 5em 3em 5em;
     grid-template-columns: 45% 8% 45%;
     grid-column-gap: 1em;
@@ -82,21 +116,41 @@ body {
 }
 
 
-.wrapper-footer {
+.wrapper-team {
     display: grid;
-    /* background: rgba(61, 90, 67, 0.6); */
-    padding: 1em 5em 3em 5em;
+    padding: 1em 1em 1em 1em;
+    margin: 1em 3em 1em 3em;
     grid-template-columns: 19% 19% 19% 19% 19%;
     grid-column-gap: 1%;
-    width: 100%;
-    height: 400px;
+    width: 90%;
+    height: 100%;
+    background: white;
+    background-color: var(--dust-green);
+    border-radius: 4px;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 1);
+}
+
+.wrapper-footer {
+    padding: 1em;
+    background-color: var(--dust-green);
+    border-radius: 4px;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 1);
+    margin-bottom: 20px;
 }
 
 
 .project-descriptions {
-    background: white;
+    background: var(--dust-green);
     padding: 20px;
     border-radius: 4px;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 1);
+}
+
+.description-text {
+    font-size: 16px;
+    font-family: Trebuchet MS;
+    line-height: 1.6;
+    text-align: left;
 }
 
 img {
@@ -104,25 +158,19 @@ img {
 }
 
 #game-img {
-    width: 60%;
-    height: 400px;
-    margin-top: 30px;
-}
-
-#game {
     width: 100%;
+    height: 550px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .click-here {
-/*    width: 100%;*/
-/*    text-align: center;*/
     margin: 0px;
-/*    color: rgba(61, 90, 67, 0.6);*/
-    color: black;
+    color: rgba(61, 90, 67, 0.6);
 }
 
 .click-here:hover {
-    color: rgba(61, 90, 67, 1);
+    color: var(--background-green);
 }
 
 .linkedin {
@@ -165,7 +213,6 @@ a {
     margin: 15px;
     color: #fff;
     text-decoration: none;
-/*    text-transform: uppercase;   */
     font-family: Trebuchet MS, Arial, Helvetica, sans-serif 
 }
 
@@ -174,8 +221,7 @@ a:hover {
 }
 
 p {
-    margin: 5px;
-    font-size: 12px;
+    font-size: 16px;
     color: #303E2B;
     text-decoration: none; 
     text-align: center;
@@ -183,22 +229,33 @@ p {
 }
 
 
-h2 {
-    font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
-    font-size: 60px;
+h1 {
+/*    font-family: DancingJungle, Trebuchet MS, Arial, Helvetica, sans-serif;*/
+    font-family: DancingJungle;
+    font-size: 100px;
     font-weight: normal;
     text-align: center;
-    color: #303E2B;
+    color: white;
+/*    padding-top: 150px;*/
+}
+
+
+h2 {
+    font-family: DancingJungle, Trebuchet MS, Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    font-weight: normal;
+    text-align: center;
+    color: white;
     margin-top: 50px;
-    text-shadow: 2px 2px 10px rgba(61, 90, 67, 1);
 }
 
 h3 {
     font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
     font-size: 24px;
     font-weight: normal;
-    text-align: center;
+    text-align: left;
     color: #303E2B;
+    margin-bottom: 10px;
 }
 
 h4 {
@@ -209,50 +266,47 @@ h4 {
     color: #303E2B;
     margin-bottom: 0px;
     margin-top: 0px;
-/*    text-transform: uppercase;*/
 }
 
-.description {
-/*    color: red;*/
-    font-size: 16px;
-    font-family: Trebuchet MS;
-    line-height: normal;
+
+h5 {
+    font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    color: #303E2B;
+    margin-bottom: 10px;
+    margin-top: 0px;
 }
 
-.white-title {
+/*
+.white-box {
+    background-color: var(--dust-green);
+    padding-top: 10px;
+    border-radius: 4px;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 1);
+}
+*/
+
+#logo {
+    font-family: DancingJungle, Trebuchet MS, Arial, Helvetica, sans-serif;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 16px; 
+    margin-left: 10px;
+    justify-content: left;
     color: white;
-    text-shadow: 2px 2px 10px black;
+    z-index: 4;
 }
+
 
 html {
     scroll-behavior: smooth;
 }
 
 .scrolling-active {
-    background-color: rgba(61, 90, 67, 1);;
+    background-color: var(--background-green);
+    background-image: url(../img/maze-black.png);
     box-shadow: 0 3px 1rem rgba(0, 0, 0, 1);
-}
-
-#ideating, #evaluating, #prototyping {
-    margin-top: 170px;
-}
-
-#defining {
-    margin-top: 360px;
-}
-
-#empathizing {
-    margin-top: 25px;
-    /* background-color: #eee; */
-    padding: 10px;
-}
-
-#defining, #ideating, #evaluating, #prototyping {
-    /* background-color: #eee; */
-    padding: 10px;
-}
-
-
-#credit {
-    margin-bottom: 10px;
 }
