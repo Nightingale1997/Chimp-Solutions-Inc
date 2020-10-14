@@ -132,8 +132,7 @@
                 tiles += 1 + ((i - 1) * 2);
             }
             tiles -= (level - (timeArray.length - 1));
-            $("#time").attr('value', "'" + timeArray[timeArray.length - 1] + "'");
-            $("#tiles").attr('value', "'" + tiles + "'");
+            $("#round").attr('value', "'" + round + "'");
             $("#scoreButton").fadeIn();
             if (sound) {
                 var audio = new Audio('audio/loss.mp3');
