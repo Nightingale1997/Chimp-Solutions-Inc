@@ -8,17 +8,10 @@
     $nameCheck = false;
     $scoreCheck = false;
     $timeCheck = false;
-
-    if (isset($_GET['name']) && !empty ($_GET['name']))
-    {
-       $name = $_GET['name']; 
-       $name = mysqli_real_escape_string($con, $name);
-       $nameCheck = true;
-    }
     
-    if (isset($_GET['score'])&& !empty ($_GET['score']))
+    if (isset($_GET['round'])&& !empty ($_GET['round']))
     {
-       $score = $_GET['score'];
+       $score = $_GET['round'];
        $score = mysqli_real_escape_string($con, $score);
        $scoreCheck = true;
     }
@@ -29,12 +22,13 @@
        $time = mysqli_real_escape_string($con, $time);
        $timeCheck = true;
     }
+ /**
+  * right now, only inserting score
+ */
 
-    if ($nameCheck && $scoreCheck && $timeCheck)
+    if ($scoreCheck)
     {
-        $sql = "INSERT INTO highscore(name, score, time) VALUES($name, $score, $time)";
-    
-        
+        $sql = "INSERT INTO highscore(score, time) VALUES($score, 00:00:01)";
 
     }
     else
@@ -83,9 +77,17 @@
          * Fetches the current player's data from the database and stores the row in the $currentPlayer variable. 
          * The current player is identified with having the highest ID number
          */
+        
         $sql_currentPlayer = "SELECT * FROM highscore WHERE score_id = (SELECT MAX(score_id)
         FROM highscore)";
-        $currentPlayer = mysqli_query($con, $sql_currentPlayer);
+        $cP = mysqli_query($con, $sql_currentPlayer);
+        $currentPlayer = array();
+        while($playerInfo = mysqli_fetch_assoc($cP)) {
+            $currentPlayer[0] = $playerInfo["score_id"];
+            $currentPlayer[1] = $playerInfo["score"];
+            $currentPlayer[2] = $playerInfo["time"];
+        } 
+
 
 
 
@@ -143,14 +145,51 @@
     <img src="img/monkey banana.png" id="ayumu">
 
 
-
-
+    
     <img src="img/humans.png" class="humansIcon" id="human1">
     <img src="img/humans.png" class="humansIcon" id="human2">
     <img src="img/humans.png" class="humansIcon" id="human3">
     <img src="img/humans.png" class="humansIcon" id="human4">
     <img src="img/humans.png" class="humansIcon" id="human5">
   
+    <p class = "playerPosition" id="player1">DU</p>
+    <script type="text/javascript">
+            if (<?php echo $currentPlayer[1]?> == 1) {
+                document.getElementById("player1").style.display = initial;
+            }
+    </script>
+
+
+    <p class = "playerPosition" id="player2">DU</p>
+    <script type="text/javascript">
+            if (<?php echo $currentPlayer[1]?> == 2) {
+                document.getElementById("player2").style.display = initial;
+            }
+    </script>
+
+
+    <p class = "playerPosition" id="player3">DU</p>
+    <script type="text/javascript">
+            if (<?php echo $currentPlayer[1]?> == 3) {
+                document.getElementById("player3").style.display = "initial";
+            }
+    </script>
+
+
+    <p class = "playerPosition" id="player4">DU</p>
+    <script type="text/javascript">
+            if (<?php echo $currentPlayer[1]?> == 4) {
+                document.getElementById("player4").style.display = initial;
+            }
+    </script>
+
+
+    <p class = "playerPosition" id="player5">DU</p>
+    <script type="text/javascript">
+            if (<?php echo $currentPlayer[1]?> == 5) {
+                document.getElementById("player5").style.display = initial;
+            }
+    </script>
 
 
 

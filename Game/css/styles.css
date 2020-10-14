@@ -406,6 +406,46 @@ top: 45%;
     top: 31.5%;
 }
 
+.playerPosition{
+    position: absolute;
+    font-family: DANCINGJUNGLE;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 6vw;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    -webkit-text-stroke: 0.02em black;
+}
+
+#player1 {
+    display:none;
+    left: 12%;
+    top: 39%; 
+}
+
+#player2 {
+    display: none;
+    left: 30.1%;
+    top: 31%;
+}
+
+#player3 {
+    display: none;
+    left: 46%;
+    top: 23%;
+}
+
+#player4 {
+    display:none;
+    left: 62.5%;
+    top: 13.5%;
+}
+
+#player5 {
+    display:none;
+    left: 80.1%;
+    top: -4%;
+}
 
 @keyframes moveTopRight {
     0% {
