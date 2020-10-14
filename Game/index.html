@@ -13,19 +13,14 @@
 
 <body>
     <img id="soundSwitch" src="img/soundon.png">
-    <!--<div id="container">
-	<video autoplay="true" id="videoElement">
-	
-	</video>
-</div>-->
     <section id="overlay">
         <h1 id="overlayTitle">Chimp Solutions Inc.</h1>
         <div id="playButton">Start</div>
         <div id="countdown"></div>
 
-        <form action="/game/score.php" method="post" id="scoreButton">
+        <form action="./score.php" method="post" id="scoreButton">
             <input type="hidden" id="round" name="round" value="-1">
-            <input type="submit" value="Score">
+            <input type="image" src="img/results.png" value="Score" id="submitButton">
         </form>
     </section>
 
@@ -43,7 +38,7 @@
     </section>
 
     <section id="chimpOverlay">
-        <h1 id="startTitle">Tap to play!</h1>
+        <h1 id="startTitle" style="font-size: 5vw;">TAP TO PLAY!</h1>
         <img src="img/monkeytree.png" id="ayumu">
 
         <article id="jungle">

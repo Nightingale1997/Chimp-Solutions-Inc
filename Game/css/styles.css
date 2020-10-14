@@ -53,6 +53,12 @@ body {
     width: 70%;
 }
 
+#submitButton {
+    width: 10%;
+    position: absolute;
+    left: 45%;
+    bottom: 5%;
+}
 
 #startTitle {
     color: white;

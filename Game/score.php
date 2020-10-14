@@ -9,19 +9,13 @@
     $scoreCheck = false;
     $timeCheck = false;
     
-    if (isset($_GET['round'])&& !empty ($_GET['round']))
+    if (isset($_POST['round'])&& !empty ($_POST['round']))
     {
-       $score = $_GET['round'];
+       $score = $_POST['round'];
        $score = mysqli_real_escape_string($con, $score);
        $scoreCheck = true;
     }
 
-    if (isset($_GET['time'])&& !empty ($_GET['time']))
-    {
-       $time = $_GET['time'];
-       $time = mysqli_real_escape_string($con, $time);
-       $timeCheck = true;
-    }
  /**
   * right now, only inserting score
  */

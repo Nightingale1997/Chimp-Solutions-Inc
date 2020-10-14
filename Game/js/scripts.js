@@ -37,8 +37,7 @@ function onYouTubeIframeAPIReady() {
             'modestbranding': 1,
             'start': 240,
             'loop': 1,
-            'mute': 1,
-            'origin': "https://chimpsolutions.se/game"
+            'mute': 1
         }
     });
 }
