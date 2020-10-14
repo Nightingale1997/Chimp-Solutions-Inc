@@ -7,7 +7,7 @@ body {
     background: black;
     margin: 0;
     user-select: none;
-    background:  url(../img/regularbackground.jpg);
+    background: url(../img/regularbackground.jpg);
     background-size: auto 100%;
     transition: ease-in-out 3.5s;
     overflow: hidden;
@@ -75,12 +75,15 @@ body {
     right: 0;
 }
 
+#scoreButton {
+    display: none;
+}
 
 #gameTiles {
     width: 80%;
     margin-left: 10%;
     display: none;
-        position: absolute;
+    position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -143,7 +146,7 @@ body {
 
 .tile {
     z-index: 1;
-width: 10.75%;
+    width: 10.75%;
     margin-right: 2%;
     display: inline-block;
     color: white;
@@ -201,12 +204,12 @@ width: 10.75%;
     background-color: #666;
 }
 
-#rowFive{
-    margin-bottom:0;
+#rowFive {
+    margin-bottom: 0;
 }
 
-#soundSwitch{
-z-index: 15;
+#soundSwitch {
+    z-index: 15;
     position: absolute;
     left: 2.5vw;
     top: 2.5vw;
@@ -233,8 +236,8 @@ z-index: 15;
 
 /*php css*/
 
-#resultsBackground{
-    background:  url(../img/regularbackground.jpg);
+#resultsBackground {
+    background: url(../img/regularbackground.jpg);
     background-size: auto 100%;
     background-attachment: fixed;
     /* Hide scrollbars */
@@ -250,7 +253,8 @@ z-index: 15;
     font-size: 5.5vw;
     font-weight: lighter;
     letter-spacing: 0.02em;
-    -webkit-text-stroke: 0.03em black; /* width and color */
+    -webkit-text-stroke: 0.03em black;
+    /* width and color */
 }
 
 .logs {
@@ -259,35 +263,35 @@ z-index: 15;
 }
 
 #log1 {
-    background:  url(../img/L1.png);
+    background: url(../img/L1.png);
     height: 249.83px;
     left: 124px;
     top: 673px;
 }
 
 #log2 {
-    background:  url(../img/L2.png);
+    background: url(../img/L2.png);
     height: 322.2px;
     left: 364.39px;
     top: 601.72px;
 }
 
 #log3 {
-    background:  url(../img/L3.png);
+    background: url(../img/L3.png);
     height: 420.75px;
     left: 604.78px;
     top: 504.25px;
 }
 
 #log4 {
-    background:  url(../img/L4.png);
+    background: url(../img/L4.png);
     height: 506.31px;
     left: 856.31px;
     top: 418.69px;
 }
 
 #log5 {
-    background:  url(../img/L5.png);
+    background: url(../img/L5.png);
     height: 630.31px;
     left: 1112px;
     top: 293px;

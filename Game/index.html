@@ -19,23 +19,29 @@
 	</video>
 </div>-->
     <section id="overlay">
-    <h1 id="overlayTitle">Chimp Solutions Inc.</h1>
-    <div id="playButton">Start</div>
+        <h1 id="overlayTitle">Chimp Solutions Inc.</h1>
+        <div id="playButton">Start</div>
         <div id="countdown"></div>
-</section>
-    
+
+        <form action="/score.php" method="post" id="scoreButton">
+            <input type="hidden" id="time" name="time" value="-1">
+            <input type="hidden" id="tiles" name="tiles" value="-1">
+            <input type="submit" value="Score">
+        </form>
+    </section>
+
     <section id="chimpOverlay">
         <h1 id="startTitle">Tap to play!</h1>
         <img src="img/monkeytree.png" id="ayumu">
-        
+
         <article id="jungle">
-        <img id="jungleTopLeft" src="img/top-left.png">
-        <img id="jungleTopRight" src="img/top-right.png">   
-        <img id="jungleBottomLeft" src="img/bottom-left.png">
-        <img id="jungleBottomRight" src="img/bottom-right.png">
-                
+            <img id="jungleTopLeft" src="img/top-left.png">
+            <img id="jungleTopRight" src="img/top-right.png">
+            <img id="jungleBottomLeft" src="img/bottom-left.png">
+            <img id="jungleBottomRight" src="img/bottom-right.png">
+
         </article>
-    
+
     </section>
 
     <section id="gameTiles">
