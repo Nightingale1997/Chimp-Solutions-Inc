@@ -140,6 +140,8 @@
         document.getElementById("level5").innerHTML = <?php echo $levelList[4]?>;
     </script>
 
+    <img src="img/monkey banana.png" id="ayumu">
+
 
 
 

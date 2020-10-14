@@ -378,23 +378,32 @@ top: 45%;
 }
 
 #text2{
-    left: 32.3%;
-    top: 57%;
+    left: 28.1%;
+    top: 52%;
 }
 
 #text3{
-    left: 49.4%;
-    top: 49.5%;
+    left: 45.4%;
+    top: 43%;
 }
 
 #text4{
-    left: 66%;
-    top: 42%;
+    left: 62.5%;
+    top: 33.5%;
 }
 
 #text5{
-    left: 83.1%;
-    top: 35%;
+    font-size: 5.5vw;
+    left: 80.1%;
+    top: 19%;
+}
+
+#ayumu{
+    position: absolute;
+    width: 8%;  /*original: 7.3%*/
+    height: 17.5342466%;   /*original: 16%*/
+    left: 75.5%;
+    top: 31.5%;
 }
 
 
