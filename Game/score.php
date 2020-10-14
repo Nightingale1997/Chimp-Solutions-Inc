@@ -99,21 +99,16 @@
 <HTML>
 <HEAD>
 <link rel="stylesheet" href="css/styles.css?v=1.0">
-<TITLE>Your Title Here</TITLE>
-
 </HEAD>
 
-<BODY id=resultsBody>
+<BODY id=resultsBackground>
 <h1 id="resultsTitle">DINA RESULTAT:</h1>
-<img src="img/L1.png" class="logs" id="log1">
-<img src="img/L2.png" class="logs" id="log2">
-<img src="img/L3.png" class="logs" id="log3">
-<img src="img/L4.png" class="logs"  id="log4">
-<img src="img/L5.png" class="logs" id="log5">
-<div id="view"> 
-        <div>
-           
-        </div>
+<div>
+    <img src="img/L1.png" class="logs" id="log1">
+    <img src="img/L2.png" class="logs" id="log2">
+    <img src="img/L3.png" class="logs" id="log3">
+    <img src="img/L4.png" class="logs"  id="log4">
+    <img src="img/L5.png" class="logs" id="log5">
  </div>    
 
 

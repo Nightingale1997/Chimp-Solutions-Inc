@@ -232,7 +232,7 @@ z-index: 15;
 }
 
 /*php css*/
-
+/* # - id, . - class */
 #resultsBackground{
     background:  url(../img/regularbackground.jpg);
     background-size: auto 100%;
@@ -266,7 +266,7 @@ z-index: 15;
 
 #log2 {
     height: 322.2px;
-    left: 364.39px;
+    left: 464.39px;
     top: 601.72px;
 }
 
