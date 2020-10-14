@@ -98,13 +98,13 @@
 
 ?>
 
-<HTML>
+<html>
 
-<HEAD>
+<head>
     <link rel="stylesheet" href="css/styles.css">
-</HEAD>
+</head>
 
-<BODY id=resultsBackground>
+<body id=resultsBackground>
     <h1 id="resultsTitle">DINA RESULTAT:</h1>
 
     <img src="img/L1.png" class="logs" id="log1">
@@ -114,39 +114,24 @@
     <img src="img/L5.png" class="logs" id="log5">
 
     <p class="levelText" id="text1">NIVÅ 1</p>
-    <p class="levels" id="level1"></p>
-    <script>
-        document.getElementById("level1").innerHTML = <?php echo $levelList[0]?>;
+    <p class="levels" id="level1"><?php echo $levelList[0];?></p>
 
-    </script>
 
     <p class="levelText" id="text2">NIVÅ 2</p>
-    <p class="levels" id="level2"></p>
-    <script>
-        document.getElementById("level2").innerHTML = <?php echo $levelList[1]?>;
+    <p class="levels" id="level2"><?php echo $levelList[1];?></p>
 
-    </script>
 
     <p class="levelText" id="text3">NIVÅ 3</p>
-    <p class="levels" id="level3"></p>
-    <script>
-        document.getElementById("level3").innerHTML = <?php echo $levelList[2]?>;
+    <p class="levels" id="level3"><?php echo $levelList[2];?></p>
 
-    </script>
 
     <p class="levelText" id="text4">NIVÅ 4</p>
-    <p class="levels" id="level4"></p>
-    <script>
-        document.getElementById("level4").innerHTML = <?php echo $levelList[3]?>;
+    <p class="levels" id="level4"><?php echo $levelList[3];?></p>
 
-    </script>
 
     <p class="levelText" id="text5">NIVÅ 5</p>
-    <p class="levels" id="level5"></p>
-    <script>
-        document.getElementById("level5").innerHTML = <?php echo $levelList[4]?>;
+    <p class="levels" id="level5"><?php echo $levelList[4];?></p>
 
-    </script>
 
     <img src="img/monkey banana.png" id="scoreAyumu">
 
@@ -158,57 +143,46 @@
     <img src="img/humans.png" class="humansIcon" id="human4">
     <img src="img/humans.png" class="humansIcon" id="human5">
 
-    <p class="playerPosition" id="player1">DU</p>
-    <script type="text/javascript">
-        if (<?php echo $currentPlayer[1]?> == 1) {
-            document.getElementById("player1").style.display = initial;
-        }
-
-    </script>
-
-
-    <p class="playerPosition" id="player2">DU</p>
-    <script type="text/javascript">
-        if (<?php echo $currentPlayer[1]?> == 2) {
-            document.getElementById("player2").style.display = initial;
-        }
-
-    </script>
+    <p class="playerPosition" id="player1">
+        <?php 
+       if($currentPlayer[1] == 1){
+           echo "DU";
+       }
+       ?></p>
 
 
-    <p class="playerPosition" id="player3">DU</p>
-    <script type="text/javascript">
-        if (<?php echo $currentPlayer[1]?> == 3) {
-            document.getElementById("player3").style.display = "initial";
-        }
-
-    </script>
+    <p class="playerPosition" id="player2"><?php 
+       if($currentPlayer[1] == 2){
+           echo "DU";
+       }
+       ?></p>
 
 
-    <p class="playerPosition" id="player4">DU</p>
-    <script type="text/javascript">
-        if (<?php echo $currentPlayer[1]?> == 4) {
-            document.getElementById("player4").style.display = initial;
-        }
-
-    </script>
+    <p class="playerPosition" id="player3"><?php 
+       if($currentPlayer[1] == 3){
+           echo "DU";
+       }
+       ?></p>
 
 
-    <p class="playerPosition" id="player5">DU</p>
-    <script type="text/javascript">
-        if (<?php echo $currentPlayer[1]?> == 5) {
-            document.getElementById("player5").style.display = initial;
-        }
-
-    </script>
+    <p class="playerPosition" id="player4"><?php 
+       if($currentPlayer[1] == 4){
+           echo "DU";
+       }
+       ?></p>
 
 
+
+    <p class="playerPosition" id="player5"><?php 
+       if($currentPlayer[1] == 5){
+           echo "DU";
+       }
+       ?></p>
 
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/scripts.js">
-        < /BODY>
+    <script src="js/scripts.js"></script>
+</body>
 
-        <
-        /HTML>
+</html>

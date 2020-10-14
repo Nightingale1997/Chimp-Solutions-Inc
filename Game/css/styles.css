@@ -451,31 +451,26 @@ body {
 }
 
 #player1 {
-    display: none;
     left: 12%;
     top: 39%;
 }
 
 #player2 {
-    display: none;
     left: 30.1%;
     top: 31%;
 }
 
 #player3 {
-    display: none;
     left: 46%;
     top: 23%;
 }
 
 #player4 {
-    display: none;
     left: 62.5%;
     top: 13.5%;
 }
 
 #player5 {
-    display: none;
     left: 80.1%;
     top: -4%;
 }

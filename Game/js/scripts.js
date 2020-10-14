@@ -1,4 +1,4 @@
-var video = document.querySelector("#videoElement");
+/*var video = document.querySelector("#videoElement");
 
 if (navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia({
@@ -11,6 +11,7 @@ if (navigator.mediaDevices.getUserMedia) {
             console.log("Something went wrong!");
         });
 }
+*/
 
 
 

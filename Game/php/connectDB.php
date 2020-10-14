@@ -10,7 +10,7 @@
 
 <?php
 function connect(){
-$con = new mysqli("chimpsolutions.se.mysql","chimpsolutions_sebananadb","","ixduniverseum") or die("Connection failed: %s\n".$con->error);
+$con = new mysqli("chimpsolutions.se.mysql","chimpsolutions_sebananadb","ixduniverseum","chimpsolutions_sebananadb") or die("Connection failed: %s\n".$con->error);
 mysqli_set_charset($con,'utf8'); //sÃ¤tter teckenkod utf8
 return $con;
 }
