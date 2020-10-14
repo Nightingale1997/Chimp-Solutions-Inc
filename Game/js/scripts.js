@@ -1,4 +1,4 @@
-/*var video = document.querySelector("#videoElement");
+var video = document.querySelector("#videoElement");
 
 if (navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia({
@@ -11,7 +11,7 @@ if (navigator.mediaDevices.getUserMedia) {
             console.log("Something went wrong!");
         });
 }
-*/
+
 
 
 
@@ -37,7 +37,8 @@ function onYouTubeIframeAPIReady() {
             'modestbranding': 1,
             'start': 240,
             'loop': 1,
-            'mute': 1
+            'mute': 1,
+            'origin': "https://chimpsolutions.se/game"
         }
     });
 }
