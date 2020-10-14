@@ -61,7 +61,7 @@
          * The index numbers in the array represent the level, so index 0 is level 1
          */
         
-        $levelList = array(0,0,0,0,0,0,0,0,0);
+        $levelList = array(0,0,0,0,0);
 
         $sql_levelscore = "SELECT score_id, score FROM highscore ORDER BY score DESC, time";
         if ($result2 = mysqli_query($con, $sql_levelscore)) {
@@ -110,8 +110,38 @@
     <img src="img/L4.png" class="logs"  id="log4">
     <img src="img/L5.png" class="logs" id="log5">
 
+    <p class="levelText" id="text1">NIVÅ 1</p>
+    <p class="levels" id="level1"></p>
+    <script>
+        document.getElementById("level1").innerHTML = <?php echo $levelList[0]?>;
+    </script>
 
-    
+    <p class="levelText" id="text2">NIVÅ 2</p>
+    <p class="levels" id="level2"></p>
+    <script>
+        document.getElementById("level2").innerHTML = <?php echo $levelList[1]?>;
+    </script>
+
+    <p class="levelText" id="text3">NIVÅ 3</p>
+    <p class="levels" id="level3"></p>
+    <script>
+        document.getElementById("level3").innerHTML = <?php echo $levelList[2]?>;
+    </script>
+
+    <p class="levelText" id="text4">NIVÅ 4</p>
+    <p class="levels" id="level4"></p>
+    <script>
+        document.getElementById("level4").innerHTML = <?php echo $levelList[3]?>;
+    </script>
+
+    <p class="levelText" id="text5">NIVÅ 5</p>
+    <p class="levels" id="level5"></p>
+    <script>
+        document.getElementById("level5").innerHTML = <?php echo $levelList[4]?>;
+    </script>
+
+
+
 
     <img src="img/humans.png" class="humansIcon" id="human1">
     <img src="img/humans.png" class="humansIcon" id="human2">
