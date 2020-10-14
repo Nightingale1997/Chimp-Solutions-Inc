@@ -9,7 +9,7 @@
     $scoreCheck = false;
     $timeCheck = false;
     
-    if (isset($_POST['round'])&& !empty ($_POST['round']))
+    if (isset($_POST['round']) && !empty($_POST['round']))
     {
        $score = $_POST['round'];
        $score = mysqli_real_escape_string($con, $score);
@@ -23,7 +23,7 @@
     if ($scoreCheck)
     {
         $sql = "INSERT INTO highscore(score, time) VALUES($score, 00:00:01)";
-
+        mysqli_query($con, $sql);
     }
     else
     {
@@ -95,6 +95,16 @@
 <html>
 
 <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Chimp Solutions</title>
+    <meta name="description" content="Go bananas!">
+    <meta name="author" content="Chimp Solutions">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
