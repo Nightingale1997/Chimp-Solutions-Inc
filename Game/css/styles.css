@@ -24,6 +24,36 @@ body {
 }
 
 
+#endGame article {
+    width: 25%;
+    position: absolute;
+    top: -70%;
+    transition: ease-out 2s;
+}
+
+#endGame article:first-child {
+    left: 10%;
+}
+
+#endGame article:last-child {
+    right: 10%;
+}
+
+
+#endGame article img {
+    width: 100%;
+}
+
+#endGame article video,
+#endGame article #player {
+    position: absolute;
+    top: 30%;
+    left: 14%;
+    height: 65%;
+    width: 70%;
+}
+
+
 #startTitle {
     color: white;
     width: 10%;
@@ -80,8 +110,8 @@ body {
 }
 
 #gameTiles {
-    width: 80%;
-    margin-left: 10%;
+    width: 70%;
+    margin-left: 15%;
     display: none;
     position: absolute;
     top: 50%;
@@ -213,6 +243,7 @@ body {
     position: absolute;
     left: 2.5vw;
     top: 2.5vw;
+    width: 5%;
 }
 
 

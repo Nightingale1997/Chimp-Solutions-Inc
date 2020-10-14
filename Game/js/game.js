@@ -125,6 +125,8 @@
         }
 
         function loss() {
+            $("body").removeClass("gameBackground");
+            $("#gameTiles").fadeOut();
             console.log(round);
             for (i = 1; i < (round + 1); i++) {
                 tiles += 1 + ((i - 1) * 2);
@@ -141,12 +143,22 @@
 
 
 
-            $("#overlayTitle").text("FAILED AT ROUND " + round + " YOU GOT " + (timeArray.length - 1) + "/" + level + " IN " + timeArray[timeArray.length - 1] + " SECONDS");
+            $("#overlayTitle").text("FAILED AT ROUND " + round + " YOU GOT " + (timeArray.length - 1) + "/" + level);
             $("#playButton").text("PLAY AGAIN");
             level = 1;
             round = 1;
             tiles = 0;
             resetGame();
+
+            showEndgame();
+
+        }
+
+        function showEndgame() {
+            $("#endGame article").each(function () {
+                $(this).css("top", "0");
+                player.playVideo();
+            });
 
         }
 
