@@ -243,7 +243,7 @@ z-index: 15;
 #resultsTitle {
     position: absolute;
     left: 9%;
-    top: 13%;
+    top: 10%;
     font-family: DancingJungle;
     color: white;
     text-align: center;
@@ -253,40 +253,74 @@ z-index: 15;
     -webkit-text-stroke: 0.03em black; /* width and color */
 }
 
+
 .logs {
     position: absolute;
     width: 12.6%;
 }
 
 #log1 {
-    height: 249.83px;
+    height: 28%;
     left: 8.6%;
-    top: 82%;
+    top: 72%;
 }
 
 #log2 {
-    height: 322.2px;
-    left: 464.39px;
-    top: 601.72px;
+    height: 35%;
+    left: 26%;
+    top: 65%;
 }
 
 #log3 {
-    height: 420.75px;
-    left: 604.78px;
-    top: 504.25px;
+    height: 44%;
+    left: 43%;
+    top: 56%;
 }
 
 #log4 {
-    height: 506.31px;
-    left: 856.31px;
-    top: 418.69px;
+    height: 53.6%;
+    left: 60%;
+    top: 46.4%;
 }
 
 #log5 {
-    height: 630.31px;
-    left: 1112px;
-    top: 293px;
+    height: 63%;
+    left: 77%;
+    top: 37%;
 }
+
+.humansIcon {
+    position: absolute;
+    width: 84px;
+    height: 80px;
+   
+}
+
+#human1 {
+    left: 13%;
+    top: 87%;
+}
+
+#human2 {
+    left: 30.5%;
+    top: 81%;
+}
+
+#human3 {
+    left: 47.6%;
+    top: 74%;
+}
+
+#human4 {
+    left: 64.5%;
+    top: 67%;
+}
+
+#human5 {
+    left: 81.5%;
+    top: 60%;
+}
+
 
 
 
