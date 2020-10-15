@@ -257,11 +257,7 @@ body {
     border: 10px #333 solid;
 }
 
-#videoElement {
-    width: 500px;
-    height: 375px;
-    background-color: #666;
-}
+
 
 #rowFive,
 #userReplayRowFive,
@@ -304,6 +300,13 @@ body {
 
 .jungleBottomLeftAnimation {
     animation-name: moveBottomLeft;
+}
+
+#videoElement {
+background: url(../img/DU.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /*php css*/
