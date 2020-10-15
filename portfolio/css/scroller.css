@@ -1,9 +1,9 @@
 .container {
-  position: relative;
+  position: absolute;
+    top: 70%;
   width: 24px;
   height: 24px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 50%;
 }
 
 .chevron {
