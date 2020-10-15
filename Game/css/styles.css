@@ -31,11 +31,11 @@ body {
     transition: ease-out 2s;
 }
 
-#endGame article:first-child {
+#webcamSign {
     left: 10%;
 }
 
-#endGame article:last-child {
+#youtubeSign {
     right: 10%;
 }
 
@@ -125,10 +125,38 @@ body {
     transform: translateY(-50%);
 }
 
-#gameTiles article {
+#ayumuReplayGameTiles,
+#userReplayGameTiles {
+    width: 25%;
+    position: absolute;
+    bottom: 5%;
+    background: rgba(0, 0, 0, 0.33);
+    padding: 1%;
+    display:none;
+}
+
+#ayumuReplayGameTiles .content,
+#userReplayGameTiles .content {
+    font-size: 2.5vw;
+}
+
+
+#ayumuReplayGameTiles {
+    right: 10%;
+}
+
+
+#userReplayGameTiles {
+    left: 10%;
+}
+
+#gameTiles article,
+#ayumuReplayGameTiles article,
+#userReplayGameTiles article {
     width: 100%;
     font-size: 0;
     margin-bottom: 2%;
+    position: relative;
 }
 
 #overlay {
@@ -162,11 +190,6 @@ body {
     margin-left: 45%;
 }
 
-.#playButton:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-}
 
 #countdown {
     width: 20%;
@@ -240,8 +263,20 @@ body {
     background-color: #666;
 }
 
-#rowFive {
+#rowFive,
+#userReplayRowFive,
+#ayumuReplayRowFive {
     margin-bottom: 0;
+}
+
+#userReplayRowFive,
+#ayumuReplayRowFive {
+    right: 0 !important;
+}
+
+#userReplayRowOne,
+#ayumuReplayRowOne {
+    left: 0 !important;
 }
 
 #soundSwitch {

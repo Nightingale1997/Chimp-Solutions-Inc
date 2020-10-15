@@ -128,10 +128,6 @@
             $("body").removeClass("gameBackground");
             $("#gameTiles").fadeOut();
             console.log(round);
-            for (i = 1; i < (round + 1); i++) {
-                tiles += 1 + ((i - 1) * 2);
-            }
-            tiles -= (level - (timeArray.length - 1));
             $("#round").attr('value', "'" + round + "'");
             $("#scoreButton").fadeIn();
             if (sound) {
@@ -158,6 +154,8 @@
                 $(this).css("top", "0");
                 player.playVideo();
             });
+            $("#ayumuReplayGameTiles, #userReplayGameTiles").fadeIn(2000);
+            
 
         }
 
@@ -212,8 +210,8 @@
             $("#overlayTitle").text("Passed round " + round);
             $("#playButton").text("Continue");
 
-
-
+            
+            $("#ayumuReplayGameTiles .content, #userReplayGameTiles .content").removeClass("whiteTile").html("");
             resetGame();
             countDown();
 
@@ -222,7 +220,7 @@
 
         //Resets game by removing all white tiles and emptying contents of every tile
         function resetGame() {
-            $(".content").removeClass("whiteTile").html("");
+            $("#gameTiles .content").removeClass("whiteTile").html("");
             currentNumber = 0;
             timeArray = new Array();
             $("#overlay").fadeIn();
@@ -232,34 +230,51 @@
         }
 
         function setNumbers() {
+            var rowUser;
+            var rowAyumu;
             var i;
             //Add amount of numbers equal to current level
             for (i = 0; i < level; i++) {
                 //Randomize row and column
                 row = Math.floor(Math.random() * 5) + 1;
+
                 column = Math.floor(Math.random() * 8);
 
                 //Translate row to corresponding ID
                 switch (row) {
                     case 1:
                         row = "#rowOne";
+                        rowUser = "#userReplayRowOne";
+                        rowAyumu = "#ayumuReplayRowOne";
                         break;
                     case 2:
                         row = "#rowTwo";
+                        rowUser = "#userReplayRowTwo";
+                        rowAyumu = "#ayumuReplayRowTwo";
                         break;
                     case 3:
                         row = "#rowThree";
+                        rowUser = "#userReplayRowThree";
+                        rowAyumu = "#ayumuReplayRowThree";
                         break;
                     case 4:
                         row = "#rowFour";
+                        rowUser = "#userReplayRowFour";
+                        rowAyumu = "#ayumuReplayRowFour";
                         break;
                     case 5:
                         row = "#rowFive";
+                        rowUser = "#userReplayRowFive";
+                        rowAyumu = "#ayumuReplayRowFive";
                         break;
                 }
 
                 //Select the row, then the column and finally the inner div
-                chosenSquare = $(row).children('div').eq(column).children('div').eq(0);
+                var chosenSquare = $(row).children('div').eq(column).children('div').eq(0);
+
+                var userReplayChosenSquare = $(rowUser).children('div').eq(column).children('div').eq(0);
+
+                var ayumuReplayChosenSquare = $(rowAyumu).children('div').eq(column).children('div').eq(0);
 
                 if ($(chosenSquare).text().length > 0) {
                     //If this box already has a number, randomize again
@@ -267,6 +282,9 @@
                 } else {
                     //Put the current number in the box
                     $(chosenSquare).html((i + 1).toString());
+                    $(userReplayChosenSquare).html((i + 1).toString());
+                    $(ayumuReplayChosenSquare).html((i + 1).toString());
+                    
                 }
             }
             //Start
@@ -277,7 +295,7 @@
         function hideNumbers() {
 
             setTimeout(function () {
-                $(".content").each(function () {
+                $("#gameTiles .content").each(function () {
                     if ($(this).text().length > 0) {
                         $(this).addClass("whiteTile");
                     }
