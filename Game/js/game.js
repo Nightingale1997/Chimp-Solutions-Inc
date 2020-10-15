@@ -1,27 +1,30 @@
         var currentNumber = 0;
         var level = 1;
+        var round = 1;
         var idle = true;
         var sound = true;
+        var tiles = 0;
+        var startTime, endTime;
+        var timeArray = new Array();
 
 
         $("#soundSwitch").on('click tap', function () {
-            if(sound){
+            if (sound) {
                 sound = false;
-                 $("#soundSwitch").attr('src','img/soundoff.png');
+                $("#soundSwitch").attr('src', 'img/soundoff.png');
+            } else {
+                sound = true;
+                $("#soundSwitch").attr('src', 'img/soundon.png');
             }
-            else{
-                 sound = true;
-                 $("#soundSwitch").attr('src','img/soundon.png');
-            }
-            
+
 
         });
 
 
         $("body").on('click tap', function (evt) {
-            if(evt.target.id == "soundSwitch")
-          return;
-            
+            if (evt.target.id == "soundSwitch")
+                return;
+
             if (idle == true) {
                 idle = false;
 
@@ -29,7 +32,7 @@
                 $("#overlay").css("z-index:0;");
                 $("body").addClass("gameBackground");
 
-                
+
                 //  $("#chimpOverlay").fadeOut();
                 moveJungle();
             } else {
@@ -66,6 +69,7 @@
                 var pressedTile = $(e.target);
                 console.log($(e.target));
                 //Check if tile has a number
+                logTime();
                 if ($(pressedTile).text().length > 0) {
 
                     //Check if the number is the correct number
@@ -79,7 +83,8 @@
                         console.log(currentNumber > level);
                         if (currentNumber > level) {
                             victory();
-                            level+=2;
+                            level += 2;
+                            round++;
                         }
                         /*
                         //Hide numbers after first is pressed
@@ -101,9 +106,9 @@
         });
 
         function moveJungle() {
-            if(sound){
-               var audio = new Audio('audio/gamestart.mp3');
-            audio.play(); 
+            if (sound) {
+                var audio = new Audio('audio/gamestart.mp3');
+                audio.play();
             }
             $("#jungleTopRight").addClass("jungleTopRightAnimation");
             $("#jungleTopLeft").addClass("jungleTopLeftAnimation");
@@ -120,18 +125,45 @@
         }
 
         function loss() {
-            
-            if(sound){
-               var audio = new Audio('audio/loss.mp3');
-            audio.play(); 
+            $("body").removeClass("gameBackground");
+            $("#gameTiles").fadeOut();
+            console.log(round);
+            for (i = 1; i < (round + 1); i++) {
+                tiles += 1 + ((i - 1) * 2);
             }
-            
-            $("#overlayTitle").text("Failed at round " + level);
-            $("#playButton").text("Play again");
+            tiles -= (level - (timeArray.length - 1));
+            $("#round").attr('value', "'" + round + "'");
+            $("#scoreButton").fadeIn();
+            if (sound) {
+                var audio = new Audio('audio/loss.mp3');
+                audio.play();
+            }
+
+
+
+
+            $("#overlayTitle").text("FAILED AT ROUND " + round + " YOU GOT " + (timeArray.length - 1) + "/" + level);
+            $("#playButton").text("PLAY AGAIN");
             level = 1;
+            round = 1;
+            tiles = 0;
             resetGame();
 
+            showEndgame();
+
         }
+
+        function showEndgame() {
+            $("#endGame article").each(function () {
+                $(this).css("top", "0");
+                player.playVideo();
+            });
+
+        }
+
+
+
+
 
         function countDown() {
             $("#overlay").fadeIn();
@@ -140,32 +172,32 @@
             $("#countdown").text("3");
             $("#countdown").fadeIn();
             //Count down from 3
-            if(sound){
-               var audio = new Audio('audio/countdown.mp3');
-            audio.play(); 
+            if (sound) {
+                var audio = new Audio('audio/countdown.mp3');
+                audio.play();
             }
             setTimeout(function () {
                 $("#gameTiles").fadeIn(2000);
                 $("#countdown").text("2");
-                if(sound){
-               var audio = new Audio('audio/countdown.mp3');
-            audio.play(); 
-            }
+                if (sound) {
+                    var audio = new Audio('audio/countdown.mp3');
+                    audio.play();
+                }
                 setTimeout(function () {
-                    if(sound){
-               var audio = new Audio('audio/countdown.mp3');
-            audio.play(); 
-            }
+                    if (sound) {
+                        var audio = new Audio('audio/countdown.mp3');
+                        audio.play();
+                    }
                     $("#countdown").text("1");
                     setTimeout(function () {
-                        if(sound){
-               var audio = new Audio('audio/countdownend.mp3');
-            audio.play(); 
-            }
+                        if (sound) {
+                            var audio = new Audio('audio/countdownend.mp3');
+                            audio.play();
+                        }
                         $("#countdown").hide();
                         setNumbers();
                         $("#overlay").fadeOut();
-                        
+
                     }, 1000);
                 }, 1000);
             }, 1000);
@@ -173,15 +205,16 @@
 
         function victory() {
 
-            if(sound){
-            var audio = new Audio('audio/victory.mp3');
-            audio.play();
+            if (sound) {
+                var audio = new Audio('audio/victory.mp3');
+                audio.play();
             }
-            $("#overlayTitle").text("Passed round " + level);
+            $("#overlayTitle").text("Passed round " + round);
             $("#playButton").text("Continue");
 
-            resetGame();
 
+
+            resetGame();
             countDown();
 
 
@@ -191,7 +224,7 @@
         function resetGame() {
             $(".content").removeClass("whiteTile").html("");
             currentNumber = 0;
-
+            timeArray = new Array();
             $("#overlay").fadeIn();
             $("#overlayTitle").fadeIn();
             $("#playButton").fadeIn();
@@ -249,6 +282,22 @@
                         $(this).addClass("whiteTile");
                     }
                 });
+                startTimer();
             }, 200);
 
+        }
+
+        function startTimer() {
+            startTime = new Date();
+        };
+
+        function logTime() {
+            endTime = new Date();
+            var timeDiff = endTime - startTime; //in ms
+            // strip the ms
+            timeDiff /= 1000;
+
+            // get seconds 
+            var seconds = Math.round(timeDiff);
+            timeArray.push(seconds);
         }

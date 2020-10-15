@@ -7,7 +7,7 @@ body {
     background: black;
     margin: 0;
     user-select: none;
-    background:  url(../img/regularbackground.jpg);
+    background: url(../img/regularbackground.jpg);
     background-size: auto 100%;
     transition: ease-in-out 3.5s;
     overflow: hidden;
@@ -23,6 +23,42 @@ body {
     background-attachment: fixed;
 }
 
+
+#endGame article {
+    width: 25%;
+    position: absolute;
+    top: -70%;
+    transition: ease-out 2s;
+}
+
+#endGame article:first-child {
+    left: 10%;
+}
+
+#endGame article:last-child {
+    right: 10%;
+}
+
+
+#endGame article img {
+    width: 100%;
+}
+
+#endGame article video,
+#endGame article #player {
+    position: absolute;
+    top: 30%;
+    left: 14%;
+    height: 65%;
+    width: 70%;
+}
+
+#submitButton {
+    width: 10%;
+    position: absolute;
+    left: 45%;
+    bottom: 5%;
+}
 
 #startTitle {
     color: white;
@@ -75,12 +111,15 @@ body {
     right: 0;
 }
 
+#scoreButton {
+    display: none;
+}
 
 #gameTiles {
-    width: 80%;
-    margin-left: 10%;
+    width: 70%;
+    margin-left: 15%;
     display: none;
-        position: absolute;
+    position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -143,7 +182,7 @@ body {
 
 .tile {
     z-index: 1;
-width: 10.75%;
+    width: 10.75%;
     margin-right: 2%;
     display: inline-block;
     color: white;
@@ -201,15 +240,16 @@ width: 10.75%;
     background-color: #666;
 }
 
-#rowFive{
-    margin-bottom:0;
+#rowFive {
+    margin-bottom: 0;
 }
 
-#soundSwitch{
-z-index: 15;
+#soundSwitch {
+    z-index: 15;
     position: absolute;
     left: 2.5vw;
     top: 2.5vw;
+    width: 5%;
 }
 
 
@@ -233,8 +273,9 @@ z-index: 15;
 
 /*php css*/
 
-#resultsBackground{
-    background:  url(../img/regularbackground.jpg);
+/* # - id, . - class */
+#resultsBackground {
+    background: url(../img/regularbackground.jpg);
     background-size: auto 100%;
     background-attachment: fixed;
     /* Hide scrollbars */
@@ -243,57 +284,202 @@ z-index: 15;
 #resultsTitle {
     position: absolute;
     left: 9%;
-    top: 13%;
+    top: 10%;
     font-family: DancingJungle;
     color: white;
     text-align: center;
     font-size: 5.5vw;
     font-weight: lighter;
     letter-spacing: 0.02em;
-    -webkit-text-stroke: 0.03em black; /* width and color */
+    -webkit-text-stroke: 0.03em black;
+    /* width and color */
 }
+
 
 .logs {
     position: absolute;
-    width: 180.69px;
+    width: 12.6%;
 }
 
 #log1 {
-    background:  url(../img/L1.png);
-    height: 249.83px;
-    left: 124px;
-    top: 673px;
+    height: 28%;
+    left: 8.6%;
+    top: 72%;
 }
 
 #log2 {
-    background:  url(../img/L2.png);
-    height: 322.2px;
-    left: 364.39px;
-    top: 601.72px;
+    height: 35%;
+    left: 26%;
+    top: 65%;
 }
 
 #log3 {
-    background:  url(../img/L3.png);
-    height: 420.75px;
-    left: 604.78px;
-    top: 504.25px;
+    height: 44%;
+    left: 43%;
+    top: 56%;
 }
 
 #log4 {
-    background:  url(../img/L4.png);
-    height: 506.31px;
-    left: 856.31px;
-    top: 418.69px;
+    height: 53.6%;
+    left: 60%;
+    top: 46.4%;
 }
 
 #log5 {
-    background:  url(../img/L5.png);
-    height: 630.31px;
-    left: 1112px;
-    top: 293px;
+    height: 63%;
+    left: 77%;
+    top: 37%;
 }
 
+.humansIcon {
+    position: absolute;
+    width: 84px;
+    height: 80px;
 
+}
+
+#human1 {
+    left: 13%;
+    top: 87%;
+}
+
+#human2 {
+    left: 30.5%;
+    top: 81%;
+}
+
+#human3 {
+    left: 47.6%;
+    top: 74%;
+}
+
+#human4 {
+    left: 64.5%;
+    top: 67%;
+}
+
+#human5 {
+    left: 81.5%;
+    top: 60%;
+}
+
+.levels {
+    position: absolute;
+    font-family: DANCINGJUNGLE;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.4vw;
+    text-align: center;
+    color: #3B3735;
+}
+
+#level1 {
+    left: 14.7%;
+    top: 73%;
+}
+
+#level2 {
+    left: 32.3%;
+    top: 67%;
+}
+
+#level3 {
+    left: 49.4%;
+    top: 59.5%;
+}
+
+#level4 {
+    left: 66%;
+    top: 52%;
+}
+
+#level5 {
+    left: 83.1%;
+    top: 45%;
+}
+
+.levelText {
+    position: absolute;
+    font-family: DANCINGJUNGLE;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 3.5vw;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    -webkit-text-stroke: 0.02em black;
+}
+
+#text1 {
+    left: 11%;
+    top: 59%;
+}
+
+#text2 {
+    left: 28.1%;
+    top: 52%;
+}
+
+#text3 {
+    left: 45.4%;
+    top: 43%;
+}
+
+#text4 {
+    left: 62.5%;
+    top: 33.5%;
+}
+
+#text5 {
+    font-size: 5.5vw;
+    left: 80.1%;
+    top: 19%;
+}
+
+#scoreAyumu {
+    position: absolute;
+    width: 8%;
+    /*original: 7.3%*/
+    height: 17.5342466%;
+    /*original: 16%*/
+    left: 75.5%;
+    top: 31.5%;
+}
+
+.playerPosition {
+    position: absolute;
+    font-family: DANCINGJUNGLE;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 6vw;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    -webkit-text-stroke: 0.02em black;
+}
+
+#player1 {
+    left: 12%;
+    top: 39%;
+}
+
+#player2 {
+    left: 30.1%;
+    top: 31%;
+}
+
+#player3 {
+    left: 46%;
+    top: 23%;
+}
+
+#player4 {
+    left: 62.5%;
+    top: 13.5%;
+}
+
+#player5 {
+    left: 80.1%;
+    top: -4%;
+}
 
 @keyframes moveTopRight {
     0% {
