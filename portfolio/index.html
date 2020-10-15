@@ -21,10 +21,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="css/timeline.css">
     <link rel="stylesheet" href="css/style.css">
-
-
-
-
+    <link rel="stylesheet" href="css/scroller.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
 </head>
@@ -34,7 +32,8 @@
 
     <body>
 
-        <p id="logo">Chimp Solutions Inc.</p>
+        <img id="chimp-logo" src="img/favicon/favicon-32x32.png" width="28" height="28">
+        <p id="logo">Chimp Solutions</p>
         <div class="navbar">
             <!--        <a href="#"></a>-->
             <ul class="nav">
@@ -48,8 +47,14 @@
 
         <div class="header" id="home">
             <div class="wrapper-header">
-                <h1>Chimp Solutions Inc.</h1>
+                <h1>Chimp Solutions</h1>
                 <!--       <img src="img/regularbackground.jpg" style="width: 100%;">-->
+                <div class="container">
+                  <div class="chevron"></div>
+                  <div class="chevron"></div>
+                  <div class="chevron"></div>
+                  <span class="text"><span>
+                </div>
             </div>
         </div>
 
@@ -57,22 +62,34 @@
             <h2>PROJECT</h2>
             <div class="v-space"></div>
             <div class="wrapper-project">
+                
+                <div data-aos="zoom-in">
                 <div class="project-descriptions">
                     <h3>What</h3>
                     <p class="description-text">The [CHIMPANZEE MEMORY TEST] is an interactive online game which quantifies the user’s cognitive ability, specifically their short-term memory. The users’ results are being compared with the results of other people who played the game, and to the chimpanzee Auymus' results who have an extraordinary short term memory. </p>
                 </div>
+                    </div>
+                
+                <div data-aos="zoom-in">
                 <div class="project-descriptions">
                     <h3>Learning outcomes</h3>
                     <p class="description-text">The purpose of the game is to highlight the cognitive difference between species by giving an example of a task that a chimpanzee is better at than a human.</p>
                 </div>
+                </div>
+                
+                <div data-aos="zoom-in">
                 <div class="project-descriptions">
                     <h3>How</h3>
                     <p class="description-text">
                         The game is developed using Javascript, jQuery, HTML, CSS, SQL, and PHP.</p>
                 </div>
+                </div>
+                
+                <div data-aos="zoom-in">
                 <div class="project-descriptions">
                     <h3>For who</h3>
                     <p class="description-text">The Chimpanzee memory test is an Interaction Design Project and was created to be a part of Universeum’s digital exhibition Quantified Self. The target audience are 12-16 year olds but everyone is of course welcome!</p>
+                </div>
                 </div>
             </div>
             <div class="v-space"></div>
@@ -175,54 +192,76 @@
 
                 <div class="wrapper-team">
                     <div>
-                        <div class="white-box">
-                            <img src="img/Chimp-icons/chimp.png" alt="chimp">
-                            <h5>Caroline Xia</h5>
-                            <p>Executive Submissions Manager</p>
+                        <img src="img/Team/caroline-chimp.png" alt="caroline">
+                        <h5>Caroline Xia</h5>
+                        <p>Executive Submissions Manager</p>
+
+                        <div class="contacts">
+                            <a href="mailto:carolinexia97@gmail.com">
+                                <img class="linkedin" src="img/contact-icons/gmail.svg" alt="gmail">
+                            </a>
                             <a href="https://www.linkedin.com/in/carolinexia/">
-                                <img class="linkedin" src="img/LinkedIn/linkedin2.png" alt="linkedin">
+                                <img class="linkedin" src="img/contact-icons/linkedin.svg" alt="linkedin">
                             </a>
                         </div>
+                        
                     </div>
                     <div>
-                        <div class="white-box">
-                            <img src="img/Chimp-icons/chimp.png" alt="chimp">
-                            <h5>Elina Olsson</h5>
-                            <p>Supreme Leader</p>
+                        <img src="img/Chimp-icons/chimp.png" alt="elina">
+                        <h5>Elina Olsson</h5>
+                        <p>Supreme Leader</p>
+                        
+                        <div class="contacts">
+                            <a href="mailto:elina.ls.olsson@gmail.com">
+                                <img class="linkedin" src="img/contact-icons/gmail.svg" alt="gmail">
+                            </a>
                             <a href="https://www.linkedin.com/in/elina-olsson/">
-                                <img class="linkedin" src="img/LinkedIn/linkedin2.png" alt="linkedin">
+                                <img class="linkedin" src="img/contact-icons/linkedin.svg" alt="linkedin">
                             </a>
                         </div>
+                        
                     </div>
                     <div>
-                        <div class="white-box">
-                            <img src="img/Chimp-icons/chimp.png" alt="chimp">
-                            <h5>Elio Brian Venero</h5>
-                            <p>Chief of Alpaca Logistics 🐫</p>
+                        <img src="img/Chimp-icons/chimp.png" alt="elio">
+                        <h5>Elio Brian Venero</h5>
+                        <p>Chief of Alpaca Logistics 🐫</p>
+                        
+                        <div class="contacts">
+                            <a href="mailto:brian.venero@gmail.com">
+                                <img class="linkedin" src="img/contact-icons/gmail.svg" alt="gmail">
+                            </a>
                             <a href="https://www.linkedin.com/in/brianvenero/">
-                                <img class="linkedin" src="img/LinkedIn/linkedin2.png" alt="linkedin">
+                                <img class="linkedin" src="img/contact-icons/linkedin.svg" alt="linkedin">
                             </a>
-                        </div>
+                        </div>                                                
                     </div>
                     <div>
-                        <div class="white-box">
-                            <img src="img/Chimp-icons/chimp.png" alt="chimp">
-                            <h5>Kevin Solovjov</h5>
-                            <p>Certified Nickname Provider</p>
+                        <img src="img/Chimp-icons/chimp.png" alt="kevin">
+                        <h5>Kevin Solovjov</h5>
+                        <p>Certified Nickname Provider</p>
+                        
+                        <div class="contacts">
+                            <a href="mailto:kevin.solovjov@gmail.com">
+                                <img class="linkedin" src="img/contact-icons/gmail.svg" alt="gmail">
+                            </a>
                             <a href="https://www.linkedin.com/in/kevin-solovjov-396254143/">
-                                <img class="linkedin" src="img/LinkedIn/linkedin2.png" alt="linkedin">
+                                <img class="linkedin" src="img/contact-icons/linkedin.svg" alt="linkedin">
                             </a>
-                        </div>
+                        </div>   
                     </div>
                     <div>
-                        <div class="white-box">
-                            <img src="img/Chimp-icons/chimp.png" alt="chimp">
-                            <h5>Rithika Kabilan</h5>
-                            <p>Head Process Overseer</p>
-                            <a href="https://www.linkedin.com/in/rithika-kabilan-647798146/">
-                                <img class="linkedin" src="img/LinkedIn/linkedin2.png" alt="linkedin">
+                        <img src="img/Team/rithika-chimp.png" alt="rithika">
+                        <h5>Rithika Kabilan</h5>
+                        <p>Head Process Overseer</p>
+                        
+                        <div class="contacts">
+                            <a href="mailto:rithika.Kabilan@gmail.com">
+                                <img class="linkedin" src="img/contact-icons/gmail.svg" alt="gmail">
                             </a>
-                        </div>
+                            <a href="https://www.linkedin.com/in/rithika-kabilan-647798146/">
+                                <img class="linkedin" src="img/contact-icons/linkedin.svg" alt="linkedin">
+                            </a>
+                        </div>   
                     </div>
                     <!--        </div>-->
 
@@ -251,7 +290,12 @@
                         opacity = 0;
                     }
                 })
-
+            </script>
+            
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            
+            <script>
+                AOS.init();
             </script>
     </body>
 
