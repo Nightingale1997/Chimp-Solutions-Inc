@@ -536,6 +536,11 @@ background: url(../img/DU.png);
     top: 80%;
 }
 
+.test{
+    color: white;
+    font-size: large;
+}
+
 @keyframes moveTopRight {
     0% {
         margin-top: 0;
