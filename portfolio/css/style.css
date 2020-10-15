@@ -50,16 +50,17 @@ body {
     background-color: rgba(61, 90, 67, 1);    
     background-image: url(../img/maze-black.png);
     width: 100%;
-    background-image: url(../img/Leaves/side-left2.png), url(../img/Leaves/side-right2.png), url(../img/maze-black.png);
+    background-image: url(../img/Leaves/side-left2.png), url(../img/Leaves/side-right3.png), url(../img/maze-black.png);
     background-position: left top, right bottom, left top;
     background-repeat: no-repeat, no-repeat, repeat;
 }
 
 .game-section {
     padding-top: 10px;
-    background-image: url(../img/Leaves/side-left.png), url(../img/Leaves/side-right.png);
+    background-image: url(../img/Leaves/side-left4.png), url(../img/Leaves/side-right5.png);
     background-position: left bottom, right bottom;
     background-repeat: no-repeat, no-repeat;
+    background-size: 380px, 400px;
 }
 
 .process-section {
@@ -116,7 +117,7 @@ body {
 
 .wrapper-team {
     display: grid;
-    padding: 1em 1em 1em 1em;
+    padding: 3em 1em 2em 1em;
     margin: 1em 3em 1em 3em;
     grid-template-columns: 19% 19% 19% 19% 19%;
     grid-column-gap: 1%;
@@ -155,15 +156,6 @@ img {
     max-width: 100%;
 }
 
-.contacts {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    grid-template-columns: 25% 25%;
-    grid-column-gap: 0px;
-    width: 100%;
-}
 
 #game-img {
     width: 100%;
@@ -190,6 +182,17 @@ img {
     margin-right: auto
 }
 
+.contacts {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    grid-template-columns: 18% 28%;
+    grid-column-gap: 0px;
+    width: 100%;
+/*    height: 100px;*/
+}
+
 .v-space {
     height: 50px;
     width: 100%;
@@ -214,6 +217,7 @@ img {
     list-style: none;
     margin: 15px;
     color: #fff;
+    font-size: 18px;
 }
 
 
@@ -238,8 +242,8 @@ p {
 
 
 h1 {
-/*    font-family: DancingJungle, Trebuchet MS, Arial, Helvetica, sans-serif;*/
-    font-family: DancingJungle;
+    font-family: DancingJungle, Trebuchet MS, Arial, Helvetica, sans-serif;
+/*    font-family: DancingJungle;*/
     font-size: 130px;
     font-weight: normal;
     text-align: center;
@@ -284,18 +288,14 @@ h5 {
     font-weight: normal;
     text-align: center;
     color: #303E2B;
-    margin-bottom: 10px;
-    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-top: 10px;
 }
 
-/*
-.white-box {
-    background-color: var(--dust-green);
-    padding-top: 10px;
-    border-radius: 4px;
-    box-shadow: 0 3px 1rem rgba(0, 0, 0, 1);
+.project-roll {
+    font-size: 14px;
+    margin-top: 2px;
 }
-*/
 
 #chimp-logo {
     position: fixed;
@@ -323,6 +323,7 @@ html {
 }
 
 .scrolling-active {
+    font-size: 18px;
     background-color: var(--background-green);
     background-image: url(../img/maze-black.png);
     box-shadow: 0 3px 1rem rgba(0, 0, 0, 1);
