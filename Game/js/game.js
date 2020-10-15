@@ -339,11 +339,13 @@
                         console.log(i);
                         if (i == timeArray.length - 1) {
                             if (parseInt($(this).text()) == (failNumber)) {
-                                $(this).html("X");
+                                $(this).html("");
+                            $(this).addClass("replayWrong");
                                 return;
                             }
                         } else if (parseInt($(this).text()) == (i + 1)) {
-                            $(this).html("V");
+                            $(this).html("");
+                            $(this).addClass("replayCorrect");
                         }
 
                     }); //  your code here

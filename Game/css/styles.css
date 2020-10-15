@@ -334,6 +334,18 @@ background: url(../img/DU.png);
 }
 
 
+.replayCorrect, .replayWrong{
+       background-position: center !important;
+    background-size: cover !important; 
+}
+.replayCorrect{
+    background: url(../img/replaycorrect.png);
+}
+
+.replayWrong{
+    background: url(../img/replaywrong.png);
+}
+
 .logs {
     position: absolute;
     width: 12.6%;
