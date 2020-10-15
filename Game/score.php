@@ -183,6 +183,9 @@
        }
        ?></p>
 
+    <a href="./index.html"> 
+        <img src="img/Try again.png" id="retry">
+    </a>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

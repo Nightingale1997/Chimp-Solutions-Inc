@@ -516,6 +516,11 @@ body {
     top: -4%;
 }
 
+#retry {
+    left: 90%;
+    top: 80%;
+}
+
 @keyframes moveTopRight {
     0% {
         margin-top: 0;
