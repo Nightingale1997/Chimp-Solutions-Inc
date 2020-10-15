@@ -130,7 +130,7 @@
             $("body").removeClass("gameBackground");
             $("#gameTiles").fadeOut();
             console.log(round);
-            $("#round").attr('value', "'" + round + "'");
+            $("#round").attr('value',round);
             $("#scoreButton").fadeIn();
             if (sound) {
                 var audio = new Audio('audio/loss.mp3');

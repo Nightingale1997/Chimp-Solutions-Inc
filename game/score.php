@@ -5,15 +5,18 @@
     require "php/connectDB.php";
     $con = connect(); //Connects to Database
 
-    $nameCheck = false;
+
     $scoreCheck = false;
-    $timeCheck = false;
+
     
     if (isset($_POST['round']) && !empty($_POST['round']))
     {
-       $score = $_POST['round'];
-       $score = mysqli_real_escape_string($con, $score);
-       $scoreCheck = true;
+        $score = (int) $_POST['round'];
+        $score -=1;
+        
+        //echo "<p class='test'>round received ".$score."</p>";
+        //$score = mysqli_real_escape_string($con, $score);
+        $scoreCheck = true;
     }
 
  /**
@@ -22,7 +25,7 @@
 
     if ($scoreCheck)
     {
-        $sql = "INSERT INTO highscore(score, time) VALUES($score, 00:00:01)";
+        $sql = "INSERT INTO highscore(score) VALUES('$score')";
         mysqli_query($con, $sql);
     }
     else
@@ -30,7 +33,7 @@
   //      echo "no data available";
         
     }
-    $sql_highscore = "SELECT * FROM highscore ORDER BY score DESC, time";
+    $sql_highscore = "SELECT * FROM highscore ORDER BY score DESC";
         if ($result = mysqli_query($con, $sql_highscore)) {
             //echo " ^^ " ;
          } 
@@ -51,7 +54,7 @@
         
         $levelList = array(0,0,0,0,0);
 
-        $sql_levelscore = "SELECT score_id, score FROM highscore ORDER BY score DESC, time";
+        $sql_levelscore = "SELECT score_id, score FROM highscore ORDER BY score DESC";
         if ($result2 = mysqli_query($con, $sql_levelscore)) {
            // echo " ^__^ " ;
          } 
@@ -79,7 +82,6 @@
         while($playerInfo = mysqli_fetch_assoc($cP)) {
             $currentPlayer[0] = $playerInfo["score_id"];
             $currentPlayer[1] = $playerInfo["score"];
-            $currentPlayer[2] = $playerInfo["time"];
         } 
 
 
@@ -109,7 +111,7 @@
 </head>
 
 <body id=resultsBackground>
-    <h1 id="resultsTitle">DINA RESULTAT:</h1>
+    <h1 id="resultsTitle">DITT RESULTAT:</h1>
 
     <img src="img/L1.png" class="logs" id="log1">
     <img src="img/L2.png" class="logs" id="log2">
