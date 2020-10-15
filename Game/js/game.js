@@ -6,6 +6,7 @@
         var tiles = 0;
         var startTime, endTime;
         var timeArray = new Array();
+        var failNumber;
 
 
         $("#soundSwitch").on('click tap', function () {
@@ -97,6 +98,7 @@
                         }
                         */
                     } else {
+                        failNumber = parseInt(pressedTile.text());
                         loss();
                     }
                 }
@@ -155,7 +157,8 @@
                 player.playVideo();
             });
             $("#ayumuReplayGameTiles, #userReplayGameTiles").fadeIn(2000);
-            
+            startReplays();
+
 
         }
 
@@ -210,8 +213,9 @@
             $("#overlayTitle").text("Passed round " + round);
             $("#playButton").text("Continue");
 
-            
+
             $("#ayumuReplayGameTiles .content, #userReplayGameTiles .content").removeClass("whiteTile").html("");
+            timeArray = new Array();
             resetGame();
             countDown();
 
@@ -222,7 +226,6 @@
         function resetGame() {
             $("#gameTiles .content").removeClass("whiteTile").html("");
             currentNumber = 0;
-            timeArray = new Array();
             $("#overlay").fadeIn();
             $("#overlayTitle").fadeIn();
             $("#playButton").fadeIn();
@@ -284,7 +287,7 @@
                     $(chosenSquare).html((i + 1).toString());
                     $(userReplayChosenSquare).html((i + 1).toString());
                     $(ayumuReplayChosenSquare).html((i + 1).toString());
-                    
+
                 }
             }
             //Start
@@ -318,4 +321,41 @@
             // get seconds 
             var seconds = Math.round(timeDiff);
             timeArray.push(seconds);
+        }
+
+
+        function startReplays() {
+
+            startUserReplay();
+        }
+
+        function startUserReplay() {
+
+            var i = 0; //  set your counter to 1
+
+            function myLoop() { //  create a loop function
+                setTimeout(function () { //  call a 3s setTimeout when the loop is called
+                    $("#userReplayGameTiles .content").each(function () {
+                        console.log(i);
+                        if (i == timeArray.length - 1) {
+                            if (parseInt($(this).text()) == (failNumber)) {
+                                $(this).html("X");
+                                return;
+                            }
+                        } else if (parseInt($(this).text()) == (i + 1)) {
+                            $(this).html("V");
+                        }
+
+                    }); //  your code here
+                    i++; //  increment the counter
+                    if (i < timeArray.length) { //  if the counter < 10, call the loop function
+                        myLoop(); //  ..  again which will trigger another 
+                    } //  ..  setTimeout()
+                }, (timeArray[i] * 1000))
+            }
+
+            myLoop(); //  start the loop
+
+
+
         }
