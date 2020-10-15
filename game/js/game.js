@@ -327,6 +327,37 @@
         function startReplays() {
 
             startUserReplay();
+            setTimeout(function () {
+                startAyumuReplay()
+            }, 2000)
+        }
+
+        function startAyumuReplay() {
+
+            var i = 1; //  set your counter to 1
+            number = 1;
+
+            function myLoop() { //  create a loop function
+                setTimeout(function () { //  call a 3s setTimeout when the loop is called
+                    $("#ayumuReplayGameTiles .content").each(function () {
+                        if (parseInt($(this).text()) == (i)) {
+                            $(this).html("");
+                            $(this).addClass("replayCorrect");
+
+                        }
+
+                    }); //  your code here
+                    i++; //  increment the counter
+                    if (i != (level)) { //  if the counter < 10, call the loop function
+                        myLoop(); //  ..  again which will trigger another 
+                    } //  ..  setTimeout()
+                }, (500))
+            }
+
+            myLoop(); //  start the loop
+
+
+
         }
 
         function startUserReplay() {
@@ -340,7 +371,7 @@
                         if (i == timeArray.length - 1) {
                             if (parseInt($(this).text()) == (failNumber)) {
                                 $(this).html("");
-                            $(this).addClass("replayWrong");
+                                $(this).addClass("replayWrong");
                                 return;
                             }
                         } else if (parseInt($(this).text()) == (i + 1)) {
