@@ -15,22 +15,20 @@ body {
     width: 100%;
     padding: 0px;
     margin: 0px;
+/*    display: flex;*/
+    justify-content: center;
+    align-items: center;
+    position: absolute;
 }
 
 
 .header {
     height: 100%;
-/*    background-image: url(../img/regularbackground.jpg);*/
     background-color: var(--background-green);
-    background-image: url(../img/Leaves/top-left.png), url(../img/Leaves/top-right.png), url(../img/maze-black.png);
-    background-position: left top, right top, left top;
-    background-repeat: no-repeat, no-repeat, repeat;
-/*    filter: blur(2px);*/
-/*
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat-x;
-*/
+    background-image: url(../img/chimphanging.png), url(../img/Leaves/top-left.png), url(../img/Leaves/top-right.png), url(../img/maze-black.png);
+    background-position: right top, left top, right top, left top;
+    background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+    background-size: 300px, auto, auto, auto;
     padding: 0px;
     margin: 0px;
     position: relative;
@@ -89,11 +87,11 @@ body {
 
 .wrapper-project {
     display: grid;
-    padding: 1em 5em 3em 5em;
-    grid-template-columns: 47% 47%;
+    padding: 0px;
+    grid-template-columns: 48% 48%;
     grid-column-gap: 4%;
     grid-row-gap: 10%;
-    width: 80%;   
+    width: 75%;   
 }
 
 .wrapper-game {
@@ -138,10 +136,10 @@ body {
     margin-bottom: 20px;
 }
 
-
 .project-descriptions {
     background: var(--dust-green);
     padding: 20px;
+    height: 100%;
     border-radius: 4px;
     box-shadow: 0 3px 1rem rgba(0, 0, 0, 1);
 }
@@ -155,6 +153,16 @@ body {
 
 img {
     max-width: 100%;
+}
+
+.contacts {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    grid-template-columns: 25% 25%;
+    grid-column-gap: 0px;
+    width: 100%;
 }
 
 #game-img {
@@ -217,7 +225,7 @@ a {
 }
 
 a:hover {
-    color: #000;
+    color: var(--dust-green);
 }
 
 p {
@@ -232,10 +240,11 @@ p {
 h1 {
 /*    font-family: DancingJungle, Trebuchet MS, Arial, Helvetica, sans-serif;*/
     font-family: DancingJungle;
-    font-size: 100px;
+    font-size: 130px;
     font-weight: normal;
     text-align: center;
     color: white;
+    text-transform: uppercase;
 /*    padding-top: 150px;*/
 }
 
@@ -288,16 +297,24 @@ h5 {
 }
 */
 
+#chimp-logo {
+    position: fixed;
+    top: 10px;
+    left: 15px;
+    z-index: 4;
+}
+
 #logo {
     font-family: DancingJungle, Trebuchet MS, Arial, Helvetica, sans-serif;
     position: fixed;
     top: 15px;
-    left: 15px;
-    font-size: 16px; 
+    left: 45px;
+    font-size: 18px; 
     margin-left: 10px;
     justify-content: left;
     color: white;
     z-index: 4;
+    text-transform: uppercase;
 }
 
 
