@@ -346,103 +346,71 @@ background: url(../img/DU.png);
     background: url(../img/replaywrong.png);
 }
 
-
-.logContainer{
-    width: 12.6%;
+.logs {
     position: absolute;
-
+    width: 12.6%;
 }
 
-#container1{
+#log1 {
     height: 28%;
     left: 8.6%;
     top: 72%;
 }
 
-#container2{
+#log2 {
     height: 35%;
     left: 26%;
     top: 65%;
 }
 
-#container3{
+#log3 {
     height: 44%;
     left: 43%;
     top: 56%;
 }
 
-#container4{
+#log4 {
     height: 53.6%;
     left: 60%;
     top: 46.4%;
 }
 
-#container5{
+#log5 {
     height: 63%;
     left: 77%;
     top: 37%;
 }
 
-.logs {
-    /*position: absolute;*/
-    width: 12.6%;
-}
-
-#log1 {
-    height: 100%;
-    width: 100%;
-}
-
-#log2 {
-    height: 100%;
-    width: 100%;
-}
-
-#log3 {
-    height: 100%;
-    width: 100%;
-}
-
-#log4 {
-    height: 100%;
-    width: 100%;
-}
-
-#log5 {
-    height: 100%;
-    width: 100%;
-}
-
 .humansIcon {
     position: absolute;
-    width: 47%;
+    width: 84px;
     height: 80px;
-    left: 30.5%;
+
 }
 
 #human1 {
-    top: 50%;
-    height: 35%;
+    left: 13%;
+    top: 87%;
 }
 
 #human2 {
-    top: 45%;
-    height: 28%;
+    left: 30.5%;
+    top: 81%;
 }
 
 #human3 {
-    top: 40%;
-    height: 22%;
+    left: 47.6%;
+    top: 74%;
 }
 
 #human4 {
-    top: 35%;
-    height: 18.5%;
+    left: 64.5%;
+    top: 67%;
 }
 
 #human5 {
-    top: 30%;
-    height: 15.5%;
+    left: 81.5%;
+    top: 60%;
 }
 
 .levels {
@@ -453,30 +421,31 @@ background: url(../img/DU.png);
     font-size: 3.4vw;
     text-align: center;
     color: #3B3735;
-    left: 49%;
 }
 
 #level1 {
-    top: 0%;
-    left: 46%
+    left: 14.7%;
+    top: 73%;
 }
 
 #level2 {
-    top: 5%;
-    left: 45%
+    left: 32.3%;
+    top: 67%;
 }
 
 #level3 {
-    top: 8%;
-    left: 46%;
+    left: 49.4%;
+    top: 59.5%;
 }
 
 #level4 {
-    top: 8%;
+    left: 66%;
+    top: 52%;
 }
 
 #level5 {
-    top: 8%;
+    left: 83.1%;
+    top: 45%;
 }
 
 .levelText {
@@ -488,42 +457,42 @@ background: url(../img/DU.png);
     letter-spacing: 0.05em;
     color: #FFFFFF;
     -webkit-text-stroke: 0.02em black;
-    left: 20%;
 }
 
 #text1 {
-    top: -48%;
+    left: 11%;
+    top: 59%;
 }
 
 #text2 {
-   
-    top: -37%;
+    left: 28.1%;
+    top: 52%;
 }
 
 #text3 {
-  
-    top: -30%;
+    left: 45.4%;
+    top: 43%;
 }
 
 #text4 {
-  
-    top: -23%;
+    left: 62.5%;
+    top: 33.5%;
 }
 
 #text5 {
     font-size: 5.5vw;
-    top: -52%;
-    left: 0%;
+    left: 80.1%;
+    top: 19%;
 }
 
 #scoreAyumu {
     position: absolute;
-    width: 140px;
+    width: 8%;
     /*original: 7.3%*/
-    height: 161px;
+    height: 17.5342466%;
     /*original: 16%*/
-    left: 20%;
-    top: -23%;
+    left: 75.5%;
+    top: 31.5%;
 }
 
 .playerPosition {
@@ -563,11 +532,8 @@ background: url(../img/DU.png);
 }
 
 #retry {
-    width: 20%;
-    height: 86px;
-    left: 2%;
-    top: 5%;
-    position: absolute;
+    left: 90%;
+    top: 80%;
 }
 
 .test{
