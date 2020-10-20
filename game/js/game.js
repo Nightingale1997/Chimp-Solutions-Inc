@@ -45,22 +45,6 @@
 
 
 
-
-        $("#playButton").on('click tap', function () {
-            $("#overlay").css("z-index:0;");
-            $("body").addClass("gameBackground");
-
-
-
-            if (currentNumber == 0) {
-                countDown();
-            }
-
-
-        });
-
-
-
         $(".content").on('click tap', function (e) {
             //Ignore click if game hasn't started
             if (currentNumber != 0) {
@@ -141,7 +125,6 @@
 
 
             $("#overlayTitle").text("FAILED AT ROUND " + round + " YOU GOT " + (timeArray.length - 1) + "/" + level);
-            $("#playButton").text("PLAY AGAIN");
             level = 1;
             round = 1;
             tiles = 0;
@@ -169,7 +152,6 @@
         function countDown() {
             $("#overlay").fadeIn();
             $("#overlayTitle").hide();
-            $("#playButton").hide();
             $("#countdown").text("3");
             $("#countdown").fadeIn();
             //Count down from 3
@@ -211,8 +193,6 @@
                 audio.play();
             }
             $("#overlayTitle").text("Passed round " + round);
-            $("#playButton").text("Continue");
-
 
             $("#ayumuReplayGameTiles .content, #userReplayGameTiles .content").removeClass("whiteTile").html("");
             timeArray = new Array();
@@ -228,7 +208,6 @@
             currentNumber = 0;
             $("#overlay").fadeIn();
             $("#overlayTitle").fadeIn();
-            $("#playButton").fadeIn();
             $("#overlay").css("z-index:2;");
         }
 
