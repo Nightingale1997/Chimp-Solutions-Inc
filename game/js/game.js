@@ -22,7 +22,7 @@
         });
 
 
-        $("body").on('click tap', function (evt) {
+        $("#startButton").on('click tap', function (evt) {
             if (evt.target.id == "soundSwitch")
                 return;
 
@@ -38,22 +38,6 @@
                 moveJungle();
             } else {
 
-            }
-
-
-        });
-
-
-
-
-        $("#playButton").on('click tap', function () {
-            $("#overlay").css("z-index:0;");
-            $("body").addClass("gameBackground");
-
-
-
-            if (currentNumber == 0) {
-                countDown();
             }
 
 
@@ -117,6 +101,8 @@
             $("#jungleBottomRight").addClass("jungleBottomRightAnimation");
             $("#jungleBottomLeft").addClass("jungleBottomLeftAnimation");
             $("#ayumu").fadeOut();
+            $("#startButton").fadeOut();
+            $("#title").fadeOut();
             $("#startTitle").fadeOut();
             setTimeout(function () {
                 countDown();
@@ -140,8 +126,13 @@
 
 
 
-            $("#overlayTitle").text("FAILED AT ROUND " + round + " YOU GOT " + (timeArray.length - 1) + "/" + level);
-            $("#playButton").text("PLAY AGAIN");
+            $("#overlayTitle").text("DU NÅDDE NIVÅ " + round);
+            var temp = " DU FICK " + (timeArray.length - 1) + "/" + level + $("#userReplayGameTiles").html();
+            $("#userReplayGameTiles").html(temp);
+            
+            var temp = " AYUMU FICK " + level + "/" + level + $("#ayumuReplayGameTiles").html();
+            $("#ayumuReplayGameTiles").html(temp);
+            
             level = 1;
             round = 1;
             tiles = 0;
@@ -169,7 +160,6 @@
         function countDown() {
             $("#overlay").fadeIn();
             $("#overlayTitle").hide();
-            $("#playButton").hide();
             $("#countdown").text("3");
             $("#countdown").fadeIn();
             //Count down from 3
@@ -211,8 +201,6 @@
                 audio.play();
             }
             $("#overlayTitle").text("Passed round " + round);
-            $("#playButton").text("Continue");
-
 
             $("#ayumuReplayGameTiles .content, #userReplayGameTiles .content").removeClass("whiteTile").html("");
             timeArray = new Array();
@@ -228,7 +216,6 @@
             currentNumber = 0;
             $("#overlay").fadeIn();
             $("#overlayTitle").fadeIn();
-            $("#playButton").fadeIn();
             $("#overlay").css("z-index:2;");
         }
 
