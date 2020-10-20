@@ -387,6 +387,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
+    margin-top: 0px;
   font-size: 80px;
     font-family: DancingJungle, Trebuchet MS, Arial, Helvetica;
     color: white;
@@ -10362,13 +10363,14 @@ body {
 
 #research-ayumu {
     margin-left: 80px;
+    margin-top: 0px;
     size: 200px;
     z-index: 1;
 }
 
 #research-dr {
     margin-left: 100px;
-    margin-top: -4px;
+    margin-top: 0px;
     size: 200px;
     z-index: 1;
 }
