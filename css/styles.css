@@ -11364,6 +11364,11 @@ section {
         cover;
     width: 100%;
     /*    height: 100%;*/
+    position:relative;
+}
+
+.research-section {
+   font-family: DancingJungle;
 }
 
 .wrapper-research {}
@@ -11395,6 +11400,12 @@ section {
     /*    height: 100%;*/
 }
 
+.cognitive-section .container h3 {
+   
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+
+}
 
 .cognitive-section .container img {
     width: 100%;
