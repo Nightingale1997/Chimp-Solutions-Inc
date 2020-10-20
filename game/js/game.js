@@ -22,7 +22,7 @@
         });
 
 
-        $("body").on('click tap', function (evt) {
+        $("#startButton").on('click tap', function (evt) {
             if (evt.target.id == "soundSwitch")
                 return;
 
@@ -101,6 +101,8 @@
             $("#jungleBottomRight").addClass("jungleBottomRightAnimation");
             $("#jungleBottomLeft").addClass("jungleBottomLeftAnimation");
             $("#ayumu").fadeOut();
+            $("#startButton").fadeOut();
+            $("#title").fadeOut();
             $("#startTitle").fadeOut();
             setTimeout(function () {
                 countDown();
@@ -124,7 +126,13 @@
 
 
 
-            $("#overlayTitle").text("FAILED AT ROUND " + round + " YOU GOT " + (timeArray.length - 1) + "/" + level);
+            $("#overlayTitle").text("DU NÅDDE NIVÅ " + round);
+            var temp = " DU FICK " + (timeArray.length - 1) + "/" + level + " PÅ 0,2 SEKUNDER"+ $("#userReplayGameTiles").html();
+            $("#userReplayGameTiles").html(temp);
+            
+            var temp = " AYUMU FICK " + level + "/" + level + " PÅ 0,2 SEKUNDER" + $("#ayumuReplayGameTiles").html();
+            $("#ayumuReplayGameTiles").html(temp);
+            
             level = 1;
             round = 1;
             tiles = 0;
