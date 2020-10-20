@@ -22,7 +22,7 @@
         });
 
 
-        $("body").on('click tap', function (evt) {
+        $("#startButton").on('click tap', function (evt) {
             if (evt.target.id == "soundSwitch")
                 return;
 
@@ -101,6 +101,8 @@
             $("#jungleBottomRight").addClass("jungleBottomRightAnimation");
             $("#jungleBottomLeft").addClass("jungleBottomLeftAnimation");
             $("#ayumu").fadeOut();
+            $("#startButton").fadeOut();
+            $("#title").fadeOut();
             $("#startTitle").fadeOut();
             setTimeout(function () {
                 countDown();
