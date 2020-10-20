@@ -1,3 +1,10 @@
+var lockFunction =  window.screen.orientation.lock;
+if (lockFunction.call(window.screen.orientation, 'landscape')) {
+           console.log('Orientation locked')
+        } else {
+            console.error('There was a problem in locking the orientation')
+        }
+
 var video = document.querySelector("#videoElement");
 
 if (navigator.mediaDevices.getUserMedia) {
@@ -37,7 +44,8 @@ function onYouTubeIframeAPIReady() {
             'modestbranding': 1,
             'start': 240,
             'loop': 1,
-            'mute': 1
+            'mute': 1,
+            'playsinline': 1
         }
     });
 }

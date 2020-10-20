@@ -16,7 +16,7 @@ body {
     font-family: DancingJungle;
 }
 
-section{
+section {
     color: white;
     font-family: 'DancingJungle';
     font-size: 2vw;
@@ -622,4 +622,17 @@ section{
         margin-bottom: -30%;
         margin-left: -50%;
     }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #ayumuReplayGameTiles,
+    #userReplayGameTiles {
+        bottom: 1%;
+    }
+
+    #endGame article {
+        top: -7.5%;
+    }
+
 }
