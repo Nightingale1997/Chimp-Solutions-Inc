@@ -7,6 +7,7 @@
 
 
     $scoreCheck = false;
+    $gameCheck = false;
 
     
     if (isset($_POST['round']) && !empty($_POST['round']))
@@ -17,6 +18,7 @@
         //echo "<p class='test'>round received ".$score."</p>";
         //$score = mysqli_real_escape_string($con, $score);
         $scoreCheck = true;
+        $gameCheck = true;
     }
 
  /**
@@ -113,66 +115,67 @@
 <body id=resultsBackground>
     <h1 id="resultsTitle">DITT RESULTAT:</h1>
 
-    <img src="img/L1.png" class="logs" id="log1">
-    <img src="img/L2.png" class="logs" id="log2">
-    <img src="img/L3.png" class="logs" id="log3">
-    <img src="img/L4.png" class="logs" id="log4">
-    <img src="img/L5.png" class="logs" id="log5">
-
-    <p class="levelText" id="text1">NIVÅ 1</p>
-    <p class="levels" id="level1"><?php echo $levelList[0];?></p>
+    <article class="logContainer" id="container1">
+        <img src="img/L1.png" id="log1">
+        <p class="levelText" id="text1">NIVÅ 1</p>
+        <p class="levels" id="level1"><?php echo $levelList[0];?></p> 
+        <img src="img/humans.png" class="humansIcon" id="human1">
+    </article>
 
 
-    <p class="levelText" id="text2">NIVÅ 2</p>
-    <p class="levels" id="level2"><?php echo $levelList[1];?></p>
+    <article class="logContainer" id="container2">
+        <img src="img/L2.png" class="logs" id="log2">
+        <p class="levelText" id="text2">NIVÅ 2</p>
+        <p class="levels" id="level2"><?php echo $levelList[1];?></p>
+        <img src="img/humans.png" class="humansIcon" id="human2">
+    </article>
 
+    <article class="logContainer" id="container3">
+        <img src="img/L3.png" class="logs" id="log3">
+        <p class="levelText" id="text3">NIVÅ 3</p>
+        <p class="levels" id="level3"><?php echo $levelList[2];?></p>
+        <img src="img/humans.png" class="humansIcon" id="human3">
+    </article>
 
-    <p class="levelText" id="text3">NIVÅ 3</p>
-    <p class="levels" id="level3"><?php echo $levelList[2];?></p>
+    <article class="logContainer" id="container4">
+        <img src="img/L4.png" class="logs" id="log4">
+        <p class="levelText" id="text4">NIVÅ 4</p>
+        <p class="levels" id="level4"><?php echo $levelList[3];?></p>
+        <img src="img/humans.png" class="humansIcon" id="human4">
+    </article>
 
-
-    <p class="levelText" id="text4">NIVÅ 4</p>
-    <p class="levels" id="level4"><?php echo $levelList[3];?></p>
-
-
-    <p class="levelText" id="text5">NIVÅ 5</p>
-    <p class="levels" id="level5"><?php echo $levelList[4];?></p>
-
-
-    <img src="img/monkey banana.png" id="scoreAyumu">
-
-
-
-    <img src="img/humans.png" class="humansIcon" id="human1">
-    <img src="img/humans.png" class="humansIcon" id="human2">
-    <img src="img/humans.png" class="humansIcon" id="human3">
-    <img src="img/humans.png" class="humansIcon" id="human4">
-    <img src="img/humans.png" class="humansIcon" id="human5">
+    <article class="logContainer" id="container5">
+        <img src="img/L5.png" class="logs" id="log5">
+        <p class="levelText" id="text5">NIVÅ 5</p>
+        <p class="levels" id="level5"><?php echo $levelList[4];?></p>
+        <img src="img/monkey banana.png" id="scoreAyumu">
+        <img src="img/humans.png" class="humansIcon" id="human5">
+    </article>
 
     <p class="playerPosition" id="player1">
         <?php 
-       if($currentPlayer[1] == 1){
+       if($gameCheck && $currentPlayer[1] == 1){
            echo "DU";
        }
        ?></p>
 
 
     <p class="playerPosition" id="player2"><?php 
-       if($currentPlayer[1] == 2){
+       if($gameCheck && $currentPlayer[1] == 2){
            echo "DU";
        }
        ?></p>
 
 
     <p class="playerPosition" id="player3"><?php 
-       if($currentPlayer[1] == 3){
+       if($gameCheck && $currentPlayer[1] == 3){
            echo "DU";
        }
        ?></p>
 
 
     <p class="playerPosition" id="player4"><?php 
-       if($currentPlayer[1] == 4){
+       if($gameCheck && $currentPlayer[1] == 4){
            echo "DU";
        }
        ?></p>
@@ -180,13 +183,13 @@
 
 
     <p class="playerPosition" id="player5"><?php 
-       if($currentPlayer[1] == 5){
+       if($gameCheck && $currentPlayer[1] == 5){
            echo "DU";
        }
        ?></p>
 
     <a href="./index.html"> 
-        <img src="img/Try again.png" id="retry">
+        <img src="img/try again.png" id="retry">
     </a>
 
 
