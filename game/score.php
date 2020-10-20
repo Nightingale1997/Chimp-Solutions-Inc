@@ -7,7 +7,7 @@
 
 
     $scoreCheck = false;
-    $gameCheck = true; //set to true when testing. Should be FALSE otherwise.
+    $gameCheck = false; //set to true when testing. Should be FALSE otherwise.
 
     
     if (isset($_POST['round']) && !empty($_POST['round']))
@@ -113,7 +113,15 @@
 </head>
 
 <body id=resultsBackground>
-    <h1 id="resultsTitle">DITT RESULTAT:</h1>
+    <?php
+        if($gameCheck){
+            echo " <h1 id='resultsTitle'>DITT RESULTAT:</h1>";
+        }
+        else {
+            echo "<h1 id='resultsTitle'>ANDRAS RESULTAT:</h1>";
+        }
+    ?>
+   
 
     <article class="logContainer" id="container1">
         <img src="img/L1.png" id="log1">
@@ -146,7 +154,7 @@
 
     <article class="logContainer" id="container5">
         <img src="img/L5.png" class="logs" id="log5">
-        <p class="levelText" id="text5">NIVÅ 5</p>
+        <p class="levelText" id="text5">NIVÅ 5+</p>
         <p class="levels" id="level5"><?php echo $levelList[4];?></p>
         <img src="img/monkey banana.png" id="scoreAyumu">
         <img src="img/humans.png" class="humansIcon" id="human5">
@@ -183,15 +191,17 @@
 
 
     <p class="playerPosition" id="player5"><?php 
-       if($gameCheck && $currentPlayer[1] == 5){
+       if($gameCheck && $currentPlayer[1] >= 5){
            echo "DU";
        }
        ?></p>
 
-    <a href="./index.html"> 
-        <img src="img/try again.png" id="retry">
-    </a>
-
+    <?php
+        if($gameCheck)
+        {
+            echo " <a href='./index.html'> <img src='img/try again.png' id='retry'> </a>";
+        }?> 
+   
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>

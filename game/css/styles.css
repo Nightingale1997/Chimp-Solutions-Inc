@@ -355,9 +355,9 @@ section {
 #resultsTitle {
     position: absolute;
     left: 9%;
-    top: 10%;
+    top: 6%;
     font-family: DancingJungle;
-    color: white;
+    color: #EAB96F;
     text-align: center;
     font-size: 5.5vw;
     font-weight: lighter;
@@ -527,35 +527,35 @@ section {
 }
 
 #text1 {
-    top: -48%;
+    top: -50%;
 }
 
 #text2 {
    
-    top: -37%;
+    top: -40%;
 }
 
 #text3 {
   
-    top: -30%;
+    top: -32%;
 }
 
 #text4 {
   
-    top: -23%;
+    top: -27%;
 }
 
 #text5 {
-    font-size: 5.5vw;
-    top: -52%;
+    font-size: 4.8vw;
+    top: -53%;
     left: 0%;
 }
 
 #scoreAyumu {
     position: absolute;
-    width: 140px;
+    width: 77%;
     /*original: 7.3%*/
-    height: 161px;
+    height: 31%;
     /*original: 16%*/
     left: 20%;
     top: -23%;
@@ -577,34 +577,46 @@ section {
     top: 39%;
     animation-name: step1;
     animation-duration: 1s;
-    animation-timing-function: linear;
+    animation-timing-function: ease-out;
 }
 
 #player2 {
     left: 30.1%;
     top: 31%;
+    animation-name: step2;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
 }
 
 #player3 {
     left: 46%;
     top: 23%;
+    animation-name: step3;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
 }
 
 #player4 {
-    left: 62.5%;
+    left: 63.5%;
     top: 13.5%;
+    animation-name: step4;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
 }
 
 #player5 {
     left: 80.1%;
-    top: -4%;
+    top: -10%;
+    animation-name: step5;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
 }
 
 #retry {
     width: 20%;
     height: 86px;
-    left: 2%;
-    top: 5%;
+    right: 3%;
+    bottom: 4%;
     position: absolute;
 }
 
@@ -621,6 +633,154 @@ section {
     100% {
         left: 12%;
         top: 39%;
+    }
+}
+
+@keyframes step2{
+    0% {
+        left: 8%;
+        top: 39%;
+    }
+
+    33% {
+        left: 20%;
+        top: 39%;
+    }
+
+    67% {
+        left: 20%;
+        top: 31%;
+    }
+
+    100% {
+        left: 30.1%;
+        top: 31%;
+    }
+}
+
+@keyframes step3{
+    0% {
+        left: 8%;
+        top: 39%;
+    }
+
+    20% {
+        left: 20%;
+        top: 39%;
+    }
+
+    40% {
+        left: 20%;
+        top: 31%;
+    }
+
+    60% {
+        left: 36%;
+        top: 31%;
+    }
+
+    80% {
+        left: 36%;
+        top: 23%;
+    }
+
+    100% {
+        left: 46%;
+        top: 23%;
+    }
+}
+
+@keyframes step4{
+    0% {
+        left: 8%;
+        top: 39%;
+    }
+
+    14.3% {
+        left: 20%;
+        top: 39%;
+    }
+
+    28.6% {
+        left: 20%;
+        top: 31%;
+    }
+
+    42.9% {
+        left: 36%;
+        top: 31%;
+    }
+
+    57.2% {
+        left: 36%;
+        top: 23%;
+    }
+
+    71.5% {
+        left: 55%;
+        top: 23%;
+    }
+
+    85.8% {
+        left: 55%;
+        top: 13.5%;
+    }
+
+    100% {
+        left: 63.5%;
+        top: 13.5%;
+    }
+}
+
+@keyframes step5{
+    0% {
+        left: 8%;
+        top: 39%;
+    }
+
+    11.1% {
+        left: 20%;
+        top: 39%;
+    }
+
+    22.2% {
+        left: 20%;
+        top: 31%;
+    }
+
+    33.3% {
+        left: 36%;
+        top: 31%;
+    }
+
+    44.4% {
+        left: 36%;
+        top: 23%;
+    }
+
+    55.5% {
+        left: 55%;
+        top: 23%;
+    }
+
+    66.6% {
+        left: 55%;
+        top: 13.5%;
+    }
+
+    77.7% {
+        left: 70%;
+        top: 13.5%;
+    }
+
+    88.8% {
+        left: 70%;
+        top: -10%;
+    }
+
+    100% {
+        left: 80.1%;
+        top: -10%;
     }
 }
 
