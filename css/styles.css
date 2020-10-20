@@ -10306,6 +10306,19 @@ body {
   margin-bottom: 5rem;
 }
 
+
+.logs-section {
+  padding-top: 10px;
+    background-image: 
+        url(../img/BG-logs.png);
+    background-position: 
+        left top;
+    background-repeat: 
+        no-repeat;
+    height: 100%;
+}
+
+
 .projects-section {
   padding: 10rem 0;
 }
