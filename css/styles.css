@@ -42,6 +42,11 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+@font-face {
+  font-family: DancingJungle;
+  src: url(../fonts/DancingJungle.ttf);
+}
+
 *,
 *::before,
 *::after {
@@ -382,6 +387,9 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: 1.75rem;
+    font-family: DancingJungle, Trebuchet MS, Arial, Helvetica, 
+    color: white;
+
 }
 
 h4, .h4 {
@@ -10282,11 +10290,19 @@ body {
   }
 }
 
-.about-section {
+.game-section {
   padding-top: 10rem;
   background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+    background-image: 
+        url(../img/regularbackground.jpg);
+    background-position: 
+        left top;
+    background-repeat: 
+        no-repeat;
+    background-size: 
+        auto;
 }
-.about-section p {
+.game-section p {
   margin-bottom: 5rem;
 }
 
