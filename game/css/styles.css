@@ -381,71 +381,103 @@ section {
     background: url(../img/replaywrong.png);
 }
 
-.logs {
-    position: absolute;
+
+.logContainer{
     width: 12.6%;
+    position: absolute;
+
 }
 
-#log1 {
+#container1{
     height: 28%;
     left: 8.6%;
     top: 72%;
 }
 
-#log2 {
+#container2{
     height: 35%;
     left: 26%;
     top: 65%;
 }
 
-#log3 {
+#container3{
     height: 44%;
     left: 43%;
     top: 56%;
 }
 
-#log4 {
+#container4{
     height: 53.6%;
     left: 60%;
     top: 46.4%;
 }
 
-#log5 {
+#container5{
     height: 63%;
     left: 77%;
     top: 37%;
 }
 
+.logs {
+    /*position: absolute;*/
+    width: 12.6%;
+}
+
+#log1 {
+    height: 100%;
+    width: 100%;
+}
+
+#log2 {
+    height: 100%;
+    width: 100%;
+}
+
+#log3 {
+    height: 100%;
+    width: 100%;
+}
+
+#log4 {
+    height: 100%;
+    width: 100%;
+}
+
+#log5 {
+    height: 100%;
+    width: 100%;
+}
+
 .humansIcon {
     position: absolute;
-    width: 84px;
+    width: 47%;
     height: 80px;
-
+    left: 30.5%;
 }
 
 #human1 {
-    left: 13%;
-    top: 87%;
+    top: 50%;
+    height: 35%;
 }
 
 #human2 {
-    left: 30.5%;
-    top: 81%;
+    top: 45%;
+    height: 28%;
 }
 
 #human3 {
-    left: 47.6%;
-    top: 74%;
+    top: 40%;
+    height: 22%;
 }
 
 #human4 {
-    left: 64.5%;
-    top: 67%;
+    top: 35%;
+    height: 18.5%;
 }
 
 #human5 {
-    left: 81.5%;
-    top: 60%;
+    top: 30%;
+    height: 15.5%;
 }
 
 .levels {
@@ -456,31 +488,30 @@ section {
     font-size: 3.4vw;
     text-align: center;
     color: #3B3735;
+    left: 49%;
 }
 
 #level1 {
-    left: 14.7%;
-    top: 73%;
+    top: 0%;
+    left: 46%
 }
 
 #level2 {
-    left: 32.3%;
-    top: 67%;
+    top: 5%;
+    left: 45%
 }
 
 #level3 {
-    left: 49.4%;
-    top: 59.5%;
+    top: 8%;
+    left: 46%;
 }
 
 #level4 {
-    left: 66%;
-    top: 52%;
+    top: 8%;
 }
 
 #level5 {
-    left: 83.1%;
-    top: 45%;
+    top: 8%;
 }
 
 .levelText {
@@ -492,42 +523,42 @@ section {
     letter-spacing: 0.05em;
     color: #FFFFFF;
     -webkit-text-stroke: 0.02em black;
+    left: 20%;
 }
 
 #text1 {
-    left: 11%;
-    top: 59%;
+    top: -48%;
 }
 
 #text2 {
-    left: 28.1%;
-    top: 52%;
+   
+    top: -37%;
 }
 
 #text3 {
-    left: 45.4%;
-    top: 43%;
+  
+    top: -30%;
 }
 
 #text4 {
-    left: 62.5%;
-    top: 33.5%;
+  
+    top: -23%;
 }
 
 #text5 {
     font-size: 5.5vw;
-    left: 80.1%;
-    top: 19%;
+    top: -52%;
+    left: 0%;
 }
 
 #scoreAyumu {
     position: absolute;
-    width: 8%;
+    width: 140px;
     /*original: 7.3%*/
-    height: 17.5342466%;
+    height: 161px;
     /*original: 16%*/
-    left: 75.5%;
-    top: 31.5%;
+    left: 20%;
+    top: -23%;
 }
 
 .playerPosition {
@@ -544,6 +575,9 @@ section {
 #player1 {
     left: 12%;
     top: 39%;
+    animation-name: step1;
+    animation-duration: 1s;
+    animation-timing-function: linear;
 }
 
 #player2 {
@@ -567,13 +601,27 @@ section {
 }
 
 #retry {
-    left: 90%;
-    top: 80%;
+    width: 20%;
+    height: 86px;
+    left: 2%;
+    top: 5%;
+    position: absolute;
 }
 
 .test {
     color: white;
     font-size: large;
+}
+
+@keyframes step1{
+    0% {
+        left: 8%;
+        top: 39%;
+    }
+    100% {
+        left: 12%;
+        top: 39%;
+    }
 }
 
 @keyframes moveTopRight {
