@@ -16,11 +16,6 @@ body {
     font-family: DancingJungle;
 }
 
-section {
-    color: white;
-    font-family: 'DancingJungle';
-    font-size: 2vw;
-}
 
 .gameBackground {
     background: url(../img/darkbackground.jpg);
@@ -86,28 +81,6 @@ section {
     height: 100%;
 }
 
-#title {
-    width: calc(100% / 3);
-    position: absolute;
-    left: 42.5%;
-    top: 40%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    height: 45%;
-}
-
-#startButton {
-    width: 10%;
-    position: absolute;
-    left: 55%;
-    top: 67.5%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    height: 10%;
-    z-index: 100;
-    cursor: pointer;
-}
-
 #chimpOverlay article img {
     position: absolute;
     height: 40%;
@@ -159,7 +132,7 @@ section {
     bottom: 5%;
     background: rgba(0, 0, 0, 0.33);
     padding: 1%;
-    display: none;
+    display:none;
 }
 
 #ayumuReplayGameTiles .content,
@@ -206,13 +179,7 @@ section {
 #overlayTitle {
     color: white;
     width: 10%;
-    -webkit-text-stroke-width: 0.05vw;
-    -webkit-text-stroke-color: black;
-    letter-spacing: 2px;
-    font-size: 5vw;
-    width: 20%;
-    margin-left: 40%;
-}
+    margin-left: 45%;
 }
 
 
@@ -336,7 +303,7 @@ section {
 }
 
 #videoElement {
-    background: url(../img/DU.png);
+background: url(../img/DU.png);
     background-size: 40%;
     background-repeat: no-repeat;
     background-position: center;
@@ -367,17 +334,15 @@ section {
 }
 
 
-.replayCorrect,
-.replayWrong {
-    background-position: center !important;
-    background-size: cover !important;
+.replayCorrect, .replayWrong{
+       background-position: center !important;
+    background-size: cover !important; 
 }
-
-.replayCorrect {
+.replayCorrect{
     background: url(../img/replaycorrect.png);
 }
 
-.replayWrong {
+.replayWrong{
     background: url(../img/replaywrong.png);
 }
 
@@ -608,7 +573,7 @@ section {
     position: absolute;
 }
 
-.test {
+.test{
     color: white;
     font-size: large;
 }
@@ -618,6 +583,22 @@ section {
         left: 8%;
         top: 39%;
     }
+    100% {
+        left: 12%;
+        top: 39%;
+    }
+}
+
+@keyframes step2{
+    0% {
+        left: 8%;
+        top: 39%;
+    }
+    
+    25% {
+        
+    }
+
     100% {
         left: 12%;
         top: 39%;
@@ -670,17 +651,4 @@ section {
         margin-bottom: -30%;
         margin-left: -50%;
     }
-}
-
-@media only screen and (max-width: 600px) {
-
-    #ayumuReplayGameTiles,
-    #userReplayGameTiles {
-        bottom: 1%;
-    }
-
-    #endGame article {
-        top: -7.5%;
-    }
-
 }
