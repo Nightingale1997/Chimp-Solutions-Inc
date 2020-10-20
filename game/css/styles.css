@@ -540,6 +540,9 @@ background: url(../img/DU.png);
 #player1 {
     left: 12%;
     top: 39%;
+    animation-name: step1;
+    animation-duration: 1s;
+    animation-timing-function: linear;
 }
 
 #player2 {
@@ -573,6 +576,17 @@ background: url(../img/DU.png);
 .test{
     color: white;
     font-size: large;
+}
+
+@keyframes step1{
+    0% {
+        left: 8%;
+        top: 39%;
+    }
+    100% {
+        left: 12%;
+        top: 39%;
+    }
 }
 
 @keyframes moveTopRight {
