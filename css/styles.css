@@ -398,6 +398,7 @@ h4, .h4 {
 
 h5, .h5 {
   font-size: 1.25rem;
+    margin-top: 10px;
 }
 
 h6, .h6 {
@@ -1741,10 +1742,12 @@ pre code {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
+/*
 .table-hover tbody tr:hover {
   color: #212529;
   background-color: rgba(0, 0, 0, 0.075);
 }
+*/
 
 .table-primary,
 .table-primary > th,
@@ -1758,6 +1761,7 @@ pre code {
   border-color: #aececc;
 }
 
+/*
 .table-hover .table-primary:hover {
   background-color: #c4dbda;
 }
@@ -1765,6 +1769,7 @@ pre code {
 .table-hover .table-primary:hover > th {
   background-color: #c4dbda;
 }
+*/
 
 .table-secondary,
 .table-secondary > th,
@@ -1778,6 +1783,7 @@ pre code {
   border-color: #b3b7bb;
 }
 
+/*
 .table-hover .table-secondary:hover {
   background-color: #c8cbcf;
 }
@@ -1785,6 +1791,7 @@ pre code {
 .table-hover .table-secondary:hover > th {
   background-color: #c8cbcf;
 }
+*/
 
 .table-success,
 .table-success > th,
@@ -1818,6 +1825,7 @@ pre code {
   border-color: #86cfda;
 }
 
+/*
 .table-hover .table-info:hover {
   background-color: #abdde5;
 }
@@ -1825,6 +1833,7 @@ pre code {
 .table-hover .table-info:hover > th {
   background-color: #abdde5;
 }
+*/
 
 .table-warning,
 .table-warning > th,
@@ -1838,6 +1847,7 @@ pre code {
   border-color: #ffdf7e;
 }
 
+/*
 .table-hover .table-warning:hover {
   background-color: #ffe8a1;
 }
@@ -1845,6 +1855,7 @@ pre code {
 .table-hover .table-warning:hover > th {
   background-color: #ffe8a1;
 }
+*/
 
 .table-danger,
 .table-danger > th,
@@ -1861,10 +1872,12 @@ pre code {
 .table-hover .table-danger:hover {
   background-color: #f1b0b7;
 }
+/*
 .table-hover .table-danger:hover > td,
 .table-hover .table-danger:hover > th {
   background-color: #f1b0b7;
 }
+*/
 
 .table-light,
 .table-light > th,
@@ -1878,6 +1891,7 @@ pre code {
   border-color: #fbfcfc;
 }
 
+/*
 .table-hover .table-light:hover {
   background-color: #ececf6;
 }
@@ -1885,6 +1899,7 @@ pre code {
 .table-hover .table-light:hover > th {
   background-color: #ececf6;
 }
+*/
 
 .table-dark,
 .table-dark > th,
@@ -1898,6 +1913,7 @@ pre code {
   border-color: #95999c;
 }
 
+/*
 .table-hover .table-dark:hover {
   background-color: #b9bbbe;
 }
@@ -1905,6 +1921,7 @@ pre code {
 .table-hover .table-dark:hover > th {
   background-color: #b9bbbe;
 }
+*/
 
 .table-black,
 .table-black > th,
@@ -1918,6 +1935,7 @@ pre code {
   border-color: #7a7a7a;
 }
 
+/*
 .table-hover .table-black:hover {
   background-color: #ababab;
 }
@@ -1925,6 +1943,7 @@ pre code {
 .table-hover .table-black:hover > th {
   background-color: #ababab;
 }
+*/
 
 .table-active,
 .table-active > th,
@@ -1932,6 +1951,7 @@ pre code {
   background-color: rgba(0, 0, 0, 0.075);
 }
 
+/*
 .table-hover .table-active:hover {
   background-color: rgba(0, 0, 0, 0.075);
 }
@@ -1939,6 +1959,7 @@ pre code {
 .table-hover .table-active:hover > th {
   background-color: rgba(0, 0, 0, 0.075);
 }
+*/
 
 .table .thead-dark th {
   color: #fff;
@@ -10315,16 +10336,66 @@ body {
         left top;
     background-repeat: 
         no-repeat;
+/*    height: 100%;*/
+}
+
+.research-section {
+  padding-top: 10px;
+    background-image: 
+        url(../img/BG-research.png);
+    background-position: 
+        left top;
+    background-repeat: 
+        no-repeat;
+/*    height: 100%;*/
+}
+
+.cognitive-section {
+  padding-top: 10px;
+    background-image: 
+        url(../img/BG-cognitive.png);
+    background-position: 
+        left top;
+    background-repeat: 
+        no-repeat;
+/*    height: 100%;*/
+}
+
+.project-section {
+  padding-top: 10px;
+    background-image: 
+        url(../img/BG-research.png);
+    background-position: 
+        left top;
+    background-repeat: 
+        no-repeat;
+/*    height: 100%;*/
+}
+
+.contact-section {
+  padding-top: 10px;
+    padding-bottom: 50px;
+    background-image: 
+        url(../img/BG-cognitive.png);
+    background-position: 
+        left top;
+    background-repeat: 
+        no-repeat;
+/*    height: 100%;*/
+}
+
+.wrapper-contact {
+    display: grid;
+    grid-template-columns: 19% 19% 19% 19% 19%;
+    grid-column-gap: 1%;
+    width: 100%;
     height: 100%;
+/*    background: white;*/
 }
 
 
-.projects-section {
-  padding: 10rem 0;
-}
-.projects-section .featured-text {
-  padding: 2rem;
-}
+
+/*
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
@@ -10345,7 +10416,9 @@ body {
     width: 30%;
   }
 }
+*/
 
+/*
 .signup-section {
   padding: 10rem 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000000 100%), url("../assets/img/bg-signup.jpg");
@@ -10364,6 +10437,7 @@ body {
   letter-spacing: 0.15rem;
   border: 0;
 }
+*/
 
 .contact-section {
   padding-top: 5rem;
@@ -10395,9 +10469,11 @@ body {
   line-height: 3rem;
   color: rgba(255, 255, 255, 0.3);
 }
+/*
 .contact-section .social a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
+*/
 .contact-section .social a:active {
   color: #fff;
 }
