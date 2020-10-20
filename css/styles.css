@@ -10313,8 +10313,13 @@ body {
   }
 }
 
+section{
+        padding-bottom: 5%;
+    padding-top:  5%;
+}
+
 .game-section {
-  padding-top: 10px;
+  
   background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
     background-image: 
         url(../img/BG-game.png);
@@ -10325,6 +10330,7 @@ body {
     background-size: 
         auto;
     background-size: cover;
+
 }
 .game-section p {
   margin-bottom: 5rem;
@@ -10332,7 +10338,6 @@ body {
 
 
 .logs-section {
-  padding-top: 10px;
     background-image: 
         url(../img/BG-logs.png);
     background-position: 
@@ -10360,17 +10365,21 @@ body {
 .wrapper-research {
 }
 
+#research{
+    color:white;
+}
+
+#research-ayumu, #research-dr {
+    width:calc(100% /3);
+    display:inline-block;
+}
+
 #research-ayumu {
-    margin-left: 80px;
-    size: 200px;
-    z-index: 1;
+margin-right: 32.8%;
 }
 
 #research-dr {
-    margin-left: 100px;
-    margin-top: -4px;
-    size: 200px;
-    z-index: 1;
+
 }
 
 .cognitive-section {
