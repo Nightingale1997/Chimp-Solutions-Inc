@@ -127,10 +127,10 @@
 
 
             $("#overlayTitle").text("DU NÅDDE NIVÅ " + round);
-            var temp = " DU FICK " + (timeArray.length - 1) + "/" + level + " PÅ 0,2 SEKUNDER"+ $("#userReplayGameTiles").html();
+            var temp = " DU MEMORERADE " + (timeArray.length - 1) + "/" + level + " PÅ 0,2 SEKUNDER"+ $("#userReplayGameTiles").html();
             $("#userReplayGameTiles").html(temp);
             
-            var temp = " AYUMU FICK " + level + "/" + level + " PÅ 0,2 SEKUNDER" + $("#ayumuReplayGameTiles").html();
+            var temp = " AYUMU MEMORERADE " + level + "/" + level + " PÅ 0,2 SEKUNDER" + $("#ayumuReplayGameTiles").html();
             $("#ayumuReplayGameTiles").html(temp);
             
             level = 1;
