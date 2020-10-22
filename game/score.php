@@ -7,7 +7,7 @@
 
 
     $scoreCheck = false;
-    $gameCheck = true; //set to true when testing. Should be FALSE otherwise.
+    $gameCheck = false; //set to true when testing. Should be FALSE otherwise.
 
     
     if (isset($_POST['round']) && !empty($_POST['round']))

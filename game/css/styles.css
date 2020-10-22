@@ -493,7 +493,7 @@ section {
 
 #level1 {
     top: 0%;
-    left: 46%
+    left: 45%
 }
 
 #level2 {
@@ -546,62 +546,60 @@ section {
 }
 
 #text5 {
-    font-size: 4.8vw;
-    top: -53%;
-    left: 0%;
+    top: -23%;
 }
 
 .scoreAyumu {
     position: absolute;
-    width: 122px;
+    width: 68%;
     /*original: 7.3%*/
-    height: 122px;
+    height: 23.8%;
     /*original: 16%*/
-    left: 20%;
-    top: -23%;
+    left: 13%;
+    top: -43%;
 }
 
 .playerPosition {
     position: absolute;
-    width: 122px;
-    height: 122px;
+    width: 8.5%;
+    height: 14.8%;
 }
 
 #player1 {
-    left: 12%;
-    top: 39%;
+    left: 10%;
+    top: 45%;
     animation-name: step1;
     animation-duration: 1s;
     animation-timing-function: ease-out;
 }
 
 #player2 {
-    left: 30.1%;
-    top: 31%;
+    left: 27.5%;
+    top: 38%;
     animation-name: step2;
     animation-duration: 2s;
     animation-timing-function: ease-out;
 }
 
 #player3 {
-    left: 46%;
-    top: 23%;
+    left: 45%;
+    top: 28%;
     animation-name: step3;
     animation-duration: 3s;
     animation-timing-function: ease-out;
 }
 
 #player4 {
-    left: 63.5%;
-    top: 13.5%;
+    left: 61.5%;
+    top: 19.5%;
     animation-name: step4;
     animation-duration: 4s;
     animation-timing-function: ease-out;
 }
 
 #player5 {
-    left: 80.1%;
-    top: -10%;
+    left: 78.7%;
+    top: 10%;
     animation-name: step5;
     animation-duration: 5s;
     animation-timing-function: ease-out;
@@ -623,159 +621,159 @@ section {
 @keyframes step1{
     0% {
         left: 8%;
-        top: 39%;
+        top: 45%;
     }
     100% {
-        left: 12%;
-        top: 39%;
+        left: 10%;
+        top: 45%;
     }
 }
 
 @keyframes step2{
     0% {
         left: 8%;
-        top: 39%;
+        top: 45%;
     }
 
     33% {
-        left: 20%;
-        top: 39%;
+        left: 18%;
+        top: 45%;
     }
 
     67% {
-        left: 20%;
-        top: 31%;
+        left: 18%;
+        top: 38%;
     }
 
     100% {
-        left: 30.1%;
-        top: 31%;
+        left: 27.5%;
+        top: 38%;
     }
 }
 
 @keyframes step3{
     0% {
         left: 8%;
-        top: 39%;
+        top: 45%;
     }
 
     20% {
         left: 20%;
-        top: 39%;
+        top: 45%;
     }
 
     40% {
         left: 20%;
-        top: 31%;
+        top: 38%;
     }
 
     60% {
         left: 36%;
-        top: 31%;
+        top: 38%;
     }
 
     80% {
         left: 36%;
-        top: 23%;
+        top: 28%;
     }
 
     100% {
-        left: 46%;
-        top: 23%;
+        left: 45%;
+        top: 28%;
     }
 }
 
 @keyframes step4{
     0% {
         left: 8%;
-        top: 39%;
+        top: 45%;
     }
 
     14.3% {
         left: 20%;
-        top: 39%;
+        top: 45%;
     }
 
     28.6% {
         left: 20%;
-        top: 31%;
+        top: 38%;
     }
 
     42.9% {
         left: 36%;
-        top: 31%;
+        top: 38%;
     }
 
     57.2% {
         left: 36%;
-        top: 23%;
+        top: 28%;
     }
 
     71.5% {
-        left: 55%;
-        top: 23%;
+        left: 53%;
+        top: 28%;
     }
 
     85.8% {
-        left: 55%;
-        top: 13.5%;
+        left: 53%;
+        top: 19.5%;
     }
 
     100% {
-        left: 63.5%;
-        top: 13.5%;
+        left: 61.5%;
+        top: 19.5%;
     }
 }
 
 @keyframes step5{
     0% {
         left: 8%;
-        top: 39%;
+        top: 45%;
     }
 
     11.1% {
         left: 20%;
-        top: 39%;
+        top: 45%;
     }
 
     22.2% {
         left: 20%;
-        top: 31%;
+        top: 38%;
     }
 
     33.3% {
         left: 36%;
-        top: 31%;
+        top: 38%;
     }
 
     44.4% {
         left: 36%;
-        top: 23%;
+        top: 28%;
     }
 
     55.5% {
-        left: 55%;
-        top: 23%;
+        left: 53%;
+        top: 28%;
     }
 
     66.6% {
-        left: 55%;
-        top: 13.5%;
+        left: 53%;
+        top: 19.5%;
     }
 
     77.7% {
         left: 70%;
-        top: 13.5%;
+        top: 19.5%;
     }
 
     88.8% {
         left: 70%;
-        top: -10%;
+        top: 10%;
     }
 
     100% {
-        left: 80.1%;
-        top: -10%;
+        left: 78.7%;
+        top: 10%;
     }
 }
 
