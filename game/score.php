@@ -7,7 +7,7 @@
 
 
     $scoreCheck = false;
-    $gameCheck = false; //set to true when testing. Should be FALSE otherwise.
+    $gameCheck = true; //set to true when testing. Should be FALSE otherwise.
 
     
     if (isset($_POST['round']) && !empty($_POST['round']))
@@ -154,45 +154,45 @@
 
     <article class="logContainer" id="container5">
         <img src="img/L5.png" class="logs" id="log5">
-        <p class="levelText" id="text5">NIVÅ 5+</p>
+        <p class="levelText" id="text5">NIVÅ 5</p>
         <p class="levels" id="level5"><?php echo $levelList[4];?></p>
-        <img src="img/monkey banana.png" id="scoreAyumu">
+        <img src="img/Ayumu head.png" class="scoreAyumu">
         <img src="img/humans.png" class="humansIcon" id="human5">
     </article>
 
-    <p class="playerPosition" id="player1">
+    
         <?php 
        if($gameCheck && $currentPlayer[1] == 1){
-           echo "DU";
+           echo "<img src='img/DU icon.png' class='playerPosition' id='player1'>";
        }
-       ?></p>
+       ?>
 
 
-    <p class="playerPosition" id="player2"><?php 
+        <?php 
        if($gameCheck && $currentPlayer[1] == 2){
-           echo "DU";
+           echo "<img src='img/DU icon.png' class='playerPosition' id='player2'>";
        }
        ?></p>
 
 
-    <p class="playerPosition" id="player3"><?php 
+        <?php 
        if($gameCheck && $currentPlayer[1] == 3){
-           echo "DU";
+           echo "<img src='img/DU icon.png' class='playerPosition' id='player3'>";
        }
        ?></p>
 
 
-    <p class="playerPosition" id="player4"><?php 
+        <?php 
        if($gameCheck && $currentPlayer[1] == 4){
-           echo "DU";
+           echo "<img src='img/DU icon.png' class='playerPosition' id='player4'>";
        }
        ?></p>
 
 
 
-    <p class="playerPosition" id="player5"><?php 
+        <?php 
        if($gameCheck && $currentPlayer[1] >= 5){
-           echo "DU";
+           echo "<img src='img/DU icon.png' class='playerPosition' id='player5'>";
        }
        ?></p>
 

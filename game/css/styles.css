@@ -551,11 +551,11 @@ section {
     left: 0%;
 }
 
-#scoreAyumu {
+.scoreAyumu {
     position: absolute;
-    width: 77%;
+    width: 122px;
     /*original: 7.3%*/
-    height: 31%;
+    height: 122px;
     /*original: 16%*/
     left: 20%;
     top: -23%;
@@ -563,13 +563,8 @@ section {
 
 .playerPosition {
     position: absolute;
-    font-family: DANCINGJUNGLE;
-    font-style: normal;
-    font-weight: lighter;
-    font-size: 6vw;
-    letter-spacing: 0.05em;
-    color: #FFFFFF;
-    -webkit-text-stroke: 0.02em black;
+    width: 122px;
+    height: 122px;
 }
 
 #player1 {
