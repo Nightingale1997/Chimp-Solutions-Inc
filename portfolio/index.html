@@ -300,6 +300,15 @@
                         opacity = 0;
                     }
                 })
+                
+                $( document ).ready(function() {
+                    console.log( "ready!");
+                    
+                    let navbar = document.querySelector(".navbar");
+                    let windowPosition = window.scrollY > 50;
+                    navbar.classList.toggle('scrolling-active', windowPosition);
+//                    opacity = 0;
+                });
             </script>
             
             <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
