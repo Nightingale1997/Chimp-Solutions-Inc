@@ -11377,10 +11377,16 @@ section {
     color: white;
 }
 
+
 #research-ayumu,
 #research-dr {
     width: calc(100% /3);
     display: inline-block;
+}
+
+#research-ayumu p,
+#research-dr p{
+font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 #research-ayumu {
