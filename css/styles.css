@@ -11574,3 +11574,21 @@ section {
 .footer {
     padding: 5rem 0;
 }
+
+.linkedin {
+/*
+    min-width: 21px;
+    width: 15%;
+*/
+    width: 21px;
+    margin-top: 0px;
+    padding: 2px;
+/*    display: block;*/
+}
+
+.email {
+    margin-top: 0px;
+/*    min-width: 21px;*/
+    width: 21px;
+    padding: 2px;
+}
