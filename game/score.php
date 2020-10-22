@@ -199,7 +199,7 @@
     <?php
         if($gameCheck)
         {
-            echo " <a href='./index.html'> <img src='img/try again.png' id='retry'> </a>";
+            echo " <a href='./index.html'> <img src='img/try-again.png' id='retry'> </a>";
         }?> 
    
 
