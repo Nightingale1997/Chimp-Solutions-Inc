@@ -125,9 +125,8 @@
 
 
 
-
-            $("#overlayTitle").text("DU NÅDDE NIVÅ " + round);
-            var temp = " DU MEMORERADE " + (timeArray.length - 1) + "/" + level + " PÅ 0,2 SEK"+ $("#userReplayGameTiles").html();
+            $("#overlayTitle").text("SNABBREPRIS");
+            var temp = " DU MEMORERADE " + (timeArray.length - 1) + "/" + level + " PÅ 0,2 SEK"+ 
             $("#userReplayGameTiles").html(temp);
             
             var temp = " AYUMU MEMORERADE " + level + "/" + level + " PÅ 0,2 SEK" + $("#ayumuReplayGameTiles").html();
