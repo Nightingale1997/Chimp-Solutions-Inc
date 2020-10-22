@@ -11382,6 +11382,7 @@ section {
     color: white;
 }
 
+
 #research-ayumu,
 #research-dr {
     width: calc(100% /3);
@@ -11389,6 +11390,11 @@ section {
     position: absolute;
     top: 0;
     
+}
+
+#research-ayumu p,
+#research-dr p{
+font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 #research-ayumu {
@@ -11583,4 +11589,22 @@ section {
 
 .footer {
     padding: 5rem 0;
+}
+
+.linkedin {
+/*
+    min-width: 21px;
+    width: 15%;
+*/
+    width: 21px;
+    margin-top: 0px;
+    padding: 2px;
+/*    display: block;*/
+}
+
+.email {
+    margin-top: 0px;
+/*    min-width: 21px;*/
+    width: 21px;
+    padding: 2px;
 }
