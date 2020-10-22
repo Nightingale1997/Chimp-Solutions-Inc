@@ -126,7 +126,7 @@
 
 
 
-            $("#overlayTitle").text("DU NÅDDE NIVÅ " + round);
+            $("#overlayTitle").text("SNABBREPRIS");
             var temp = " DU MEMORERADE " + (timeArray.length - 1) + "/" + level + " PÅ 0,2 SEKUNDER"+ $("#userReplayGameTiles").html();
             $("#userReplayGameTiles").html(temp);
             
